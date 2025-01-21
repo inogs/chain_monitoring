@@ -1,0 +1,38 @@
+PrEx 20250119-16:48:10    > . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh
+PrEx 20250119-16:48:10   0< . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh [ok]
+PrEx 20250119-16:48:10    > module load autoload
+PrEx 20250119-16:48:10   0< module load autoload [ok]
+PrEx 20250119-16:48:10    > module load intelmpi/oneapi-2021--binary
+PrEx 20250119-16:48:10   0< module load intelmpi/oneapi-2021--binary [ok]
+PrEx 20250119-16:48:10    > module load mkl/oneapi-2021--binary
+PrEx 20250119-16:48:10   0< module load mkl/oneapi-2021--binary [ok]
+PrEx 20250119-16:48:10    > module load nco
+PrEx 20250119-16:48:10   0< module load nco [ok]
+PrEx 20250119-16:48:10    > module load python/3.11.7--gcc--10.2.0
+PrEx 20250119-16:48:10   0< module load python/3.11.7--gcc--10.2.0 [ok]
+PrEx 20250119-16:48:10    > ulimit -s unlimited
+PrEx 20250119-16:48:10   0< ulimit -s unlimited [ok]
+### OPA_RUNDATE ...................... '20250119'
+### OPA_WEEKDAY ...................... '0'
+### OPA_TODAY ........................ '20250119'
+### OPA_DEFAULT_RUNDATE .............. '20250119'
+### OPA_PRODDATE ..................... '20250119'
+### OPA_RESTART_RUNDATE .............. '20250118'
+### OPA_RESTART_WEEKDAY .............. '6'
+20250119-16:48:10 00 (002) : * START(opa_postproc__phase_C2.ksh)
+20250119-16:48:10 00 (002) : postprocess_C2 begin
+20250119-16:48:10 00 (002) : delivering to CMEMS DU
+PrEx 20250119-16:48:10    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_put_phase_2.ksh -y NUTR 1>> /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/20250119/opa.g100.002.opa_put_phase_2.out 2>&1
+PrEx 20250119-16:50:11   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_put_phase_2.ksh -y NUTR 1>> /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/20250119/opa.g100.002.opa_put_phase_2.out 2>&1 [ok]
+PrEx 20250119-16:50:11    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_put_phase_2.ksh -y BIOL 1>> /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/20250119/opa.g100.002.opa_put_phase_2.out 2>&1
+PrEx 20250119-16:52:03   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_put_phase_2.ksh -y BIOL 1>> /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/20250119/opa.g100.002.opa_put_phase_2.out 2>&1 [ok]
+PrEx 20250119-16:52:03    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_put_phase_2.ksh -y CARB 1>> /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/20250119/opa.g100.002.opa_put_phase_2.out 2>&1
+PrEx 20250119-16:53:55   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_put_phase_2.ksh -y CARB 1>> /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/20250119/opa.g100.002.opa_put_phase_2.out 2>&1 [ok]
+PrEx 20250119-16:53:55    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_put_phase_2.ksh -y PFTC 1>> /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/20250119/opa.g100.002.opa_put_phase_2.out 2>&1
+PrEx 20250119-16:56:15   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_put_phase_2.ksh -y PFTC 1>> /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/20250119/opa.g100.002.opa_put_phase_2.out 2>&1 [ok]
+PrEx 20250119-16:56:15    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_put_phase_2.ksh -y CO2F 1>> /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/20250119/opa.g100.002.opa_put_phase_2.out 2>&1
+PrEx 20250119-16:57:35   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_put_phase_2.ksh -y CO2F 1>> /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/20250119/opa.g100.002.opa_put_phase_2.out 2>&1 [ok]
+PrEx 20250119-16:57:35    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_put_phase_2.ksh -y EXCO 1>> /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/20250119/opa.g100.002.opa_put_phase_2.out 2>&1
+PrEx 20250119-16:58:55   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_put_phase_2.ksh -y EXCO 1>> /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/20250119/opa.g100.002.opa_put_phase_2.out 2>&1 [ok]
+20250119-16:58:55 00 (002) : postprocess_C5 done [Ok]
+20250119-16:58:55 00 (002) : * EXIT(opa_postproc__phase_C2.ksh) [Ok]

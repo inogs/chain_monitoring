@@ -1,0 +1,566 @@
+PrEx 20250108-18:40:09    > . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh
+PrEx 20250108-18:40:09   0< . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh [ok]
+PrEx 20250108-18:40:09    > module load autoload
+PrEx 20250108-18:40:09   0< module load autoload [ok]
+PrEx 20250108-18:40:09    > module load intelmpi/oneapi-2021--binary
+PrEx 20250108-18:40:09   0< module load intelmpi/oneapi-2021--binary [ok]
+PrEx 20250108-18:40:09    > module load mkl/oneapi-2021--binary
+PrEx 20250108-18:40:10   0< module load mkl/oneapi-2021--binary [ok]
+PrEx 20250108-18:40:10    > module load nco
+PrEx 20250108-18:40:10   0< module load nco [ok]
+PrEx 20250108-18:40:10    > module load python/3.11.7--gcc--10.2.0
+PrEx 20250108-18:40:10   0< module load python/3.11.7--gcc--10.2.0 [ok]
+PrEx 20250108-18:40:10    > ulimit -s unlimited
+PrEx 20250108-18:40:10   0< ulimit -s unlimited [ok]
+PrEx 20250108-18:40:10    > opa_set_default_run  
+PrEx 20250108-18:40:10   0< opa_set_default_run   [ok]
+PrEx 20250108-18:40:10    > opa_set_run forecast 20250108
+### OPA_RUNDATE ...................... '20250108'
+### OPA_WEEKDAY ...................... '3'
+### OPA_TODAY ........................ ''
+### OPA_DEFAULT_RUNDATE .............. '20250108'
+### OPA_PRODDATE ..................... '20250108'
+### OPA_RESTART_RUNDATE .............. '20250107'
+### OPA_RESTART_WEEKDAY .............. '2'
+PrEx 20250108-18:40:10   0< opa_set_run forecast 20250108 [ok]
+RECOVERY:		false
+DISABLE_DOWNLOAD:	false
+20250108-18:40:10 00 (004) : * START(opa_get.ksh)
+OPAOPER forecast
+   0) T20250107-12:00:00.nc
+   4) T20250108-12:00:00.nc
+   8) T20250109-12:00:00.nc
+  12) T20250110-12:00:00.nc
+  16) T20250111-12:00:00.nc
+  20) T20250112-12:00:00.nc
+  24) T20250113-12:00:00.nc
+  28) T20250114-12:00:00.nc
+  32) T20250115-12:00:00.nc
+  36) T20250116-12:00:00.nc
+  40) T20250117-12:00:00.nc
+   0) forecast/20250108/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc
+   1) analysis/20250108/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc
+PrEx 20250108-18:40:10    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc > /dev/null
+/g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc: NetCDF: HDF error
+PrEx 20250108-18:40:11   1< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc > /dev/null [KO]
+PrEx 20250108-18:40:11    >  echo " get /atmforcing/ecmwf_0100/netcdf//forecast/20250108/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /atmforcing/ecmwf_0100/netcdf//forecast/20250108/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF 
+Fetching /atmforcing/ecmwf_0100/netcdf//forecast/20250108/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc
+PrEx 20250108-18:42:24   0<  echo " get /atmforcing/ecmwf_0100/netcdf//forecast/20250108/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:42:24    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc > /dev/null
+/g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc: NetCDF: HDF error
+PrEx 20250108-18:42:24   1< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc > /dev/null [KO]
+PrEx 20250108-18:42:24    >  echo " get /atmforcing/ecmwf_0100/netcdf//analysis/20250108/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /atmforcing/ecmwf_0100/netcdf//analysis/20250108/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF 
+Fetching /atmforcing/ecmwf_0100/netcdf//analysis/20250108/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc
+PrEx 20250108-18:42:29   0<  echo " get /atmforcing/ecmwf_0100/netcdf//analysis/20250108/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+@@@ [opa_get_files]: _a_f_d=[f]
+timeout=[20250108 09:00:00] [1736326800]
+PrEx 20250108-18:42:29 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 [Ok]
+DEBUG: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc esiste, _FORCE_DOWNLOAD=false
+### file [medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc] already exists, and FORCE_DOWNLOAD=false => try to resume download
+PrEx 20250108-18:42:29 < cp -p /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 [Ok]
+PrEx 20250108-18:42:29    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null
+/g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc: NetCDF: HDF error
+PrEx 20250108-18:42:29   1< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null [KO]
+20250108-18:42:29 01 (004) : file [medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc] : check failed!
+PrEx 20250108-18:42:29 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:42:29 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250107-12:00:00.nc [Ok]
+20250108-18:42:29 01 (004) : file [T20250107-12:00:00.nc] not downloaded or corrupted - try again to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc'...
+PrEx 20250108-18:42:29    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc
+PrEx 20250108-18:42:43   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:42:43    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null
+PrEx 20250108-18:42:43   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null [ok]
+PrEx 20250108-18:42:43 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:42:43 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250107-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250107_ALL_grid_U.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_U.nc'...
+PrEx 20250108-18:42:43    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_U.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_U.nc
+PrEx 20250108-18:42:51   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:42:51    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_U.nc > /dev/null
+PrEx 20250108-18:42:51   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_U.nc > /dev/null [ok]
+PrEx 20250108-18:42:51 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:42:51 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/U20250107-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250107_ALL_grid_V.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_V.nc'...
+PrEx 20250108-18:42:51    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_V.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_V.nc
+PrEx 20250108-18:42:59   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:42:59    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_V.nc > /dev/null
+PrEx 20250108-18:43:00   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_V.nc > /dev/null [ok]
+PrEx 20250108-18:43:00 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:43:00 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/V20250107-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250107_ALL_grid_W.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_W.nc'...
+PrEx 20250108-18:43:00    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_W.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_W.nc
+PrEx 20250108-18:43:10   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:43:10    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_W.nc > /dev/null
+PrEx 20250108-18:43:10   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_W.nc > /dev/null [ok]
+PrEx 20250108-18:43:10 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250107_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:43:10 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/W20250107-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250108_ALL_grid_T.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_T.nc'...
+PrEx 20250108-18:43:10    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_T.nc
+PrEx 20250108-18:43:23   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:43:23    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_T.nc > /dev/null
+PrEx 20250108-18:43:23   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_T.nc > /dev/null [ok]
+PrEx 20250108-18:43:23 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:43:23 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250108_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250108-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250108_ALL_grid_U.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_U.nc'...
+PrEx 20250108-18:43:23    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_U.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_U.nc
+PrEx 20250108-18:43:31   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:43:31    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_U.nc > /dev/null
+PrEx 20250108-18:43:31   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_U.nc > /dev/null [ok]
+PrEx 20250108-18:43:31 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:43:31 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250108_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/U20250108-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250108_ALL_grid_V.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_V.nc'...
+PrEx 20250108-18:43:31    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_V.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_V.nc
+PrEx 20250108-18:43:40   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:43:40    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_V.nc > /dev/null
+PrEx 20250108-18:43:40   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_V.nc > /dev/null [ok]
+PrEx 20250108-18:43:40 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:43:40 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250108_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/V20250108-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250108_ALL_grid_W.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_W.nc'...
+PrEx 20250108-18:43:40    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_W.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_W.nc
+PrEx 20250108-18:43:50   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250108_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:43:50    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_W.nc > /dev/null
+PrEx 20250108-18:43:50   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_W.nc > /dev/null [ok]
+PrEx 20250108-18:43:50 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250108_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:43:50 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250108_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/W20250108-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250109_ALL_grid_T.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_T.nc'...
+PrEx 20250108-18:43:50    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_T.nc
+PrEx 20250108-18:44:04   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:44:04    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_T.nc > /dev/null
+PrEx 20250108-18:44:04   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_T.nc > /dev/null [ok]
+PrEx 20250108-18:44:04 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:44:04 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250109_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250109-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250109_ALL_grid_U.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_U.nc'...
+PrEx 20250108-18:44:04    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_U.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_U.nc
+PrEx 20250108-18:44:12   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:44:12    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_U.nc > /dev/null
+PrEx 20250108-18:44:12   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_U.nc > /dev/null [ok]
+PrEx 20250108-18:44:12 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:44:12 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250109_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/U20250109-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250109_ALL_grid_V.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_V.nc'...
+PrEx 20250108-18:44:12    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_V.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_V.nc
+PrEx 20250108-18:44:20   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:44:20    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_V.nc > /dev/null
+PrEx 20250108-18:44:20   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_V.nc > /dev/null [ok]
+PrEx 20250108-18:44:20 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:44:20 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250109_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/V20250109-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250109_ALL_grid_W.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_W.nc'...
+PrEx 20250108-18:44:21    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_W.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_W.nc
+PrEx 20250108-18:44:31   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250109_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:44:31    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_W.nc > /dev/null
+PrEx 20250108-18:44:31   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_W.nc > /dev/null [ok]
+PrEx 20250108-18:44:31 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250109_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:44:31 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250109_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/W20250109-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250110_ALL_grid_T.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_T.nc'...
+PrEx 20250108-18:44:31    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_T.nc
+PrEx 20250108-18:44:44   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:44:44    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_T.nc > /dev/null
+PrEx 20250108-18:44:44   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_T.nc > /dev/null [ok]
+PrEx 20250108-18:44:44 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:44:44 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250110_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250110-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250110_ALL_grid_U.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_U.nc'...
+PrEx 20250108-18:44:44    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_U.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_U.nc
+PrEx 20250108-18:44:53   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:44:53    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_U.nc > /dev/null
+PrEx 20250108-18:44:53   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_U.nc > /dev/null [ok]
+PrEx 20250108-18:44:53 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:44:53 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250110_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/U20250110-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250110_ALL_grid_V.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_V.nc'...
+PrEx 20250108-18:44:53    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_V.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_V.nc
+PrEx 20250108-18:45:01   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:45:01    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_V.nc > /dev/null
+PrEx 20250108-18:45:01   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_V.nc > /dev/null [ok]
+PrEx 20250108-18:45:01 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:45:01 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250110_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/V20250110-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250110_ALL_grid_W.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_W.nc'...
+PrEx 20250108-18:45:01    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_W.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_W.nc
+PrEx 20250108-18:45:12   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250110_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:45:12    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_W.nc > /dev/null
+PrEx 20250108-18:45:12   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_W.nc > /dev/null [ok]
+PrEx 20250108-18:45:12 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250110_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:45:12 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250110_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/W20250110-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250111_ALL_grid_T.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_T.nc'...
+PrEx 20250108-18:45:12    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_T.nc
+PrEx 20250108-18:45:25   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:45:25    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_T.nc > /dev/null
+PrEx 20250108-18:45:25   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_T.nc > /dev/null [ok]
+PrEx 20250108-18:45:25 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:45:25 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250111_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250111-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250111_ALL_grid_U.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_U.nc'...
+PrEx 20250108-18:45:25    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_U.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_U.nc
+PrEx 20250108-18:45:33   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:45:33    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_U.nc > /dev/null
+PrEx 20250108-18:45:34   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_U.nc > /dev/null [ok]
+PrEx 20250108-18:45:34 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:45:34 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250111_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/U20250111-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250111_ALL_grid_V.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_V.nc'...
+PrEx 20250108-18:45:34    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_V.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_V.nc
+PrEx 20250108-18:45:42   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:45:42    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_V.nc > /dev/null
+PrEx 20250108-18:45:42   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_V.nc > /dev/null [ok]
+PrEx 20250108-18:45:42 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:45:42 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250111_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/V20250111-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250111_ALL_grid_W.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_W.nc'...
+PrEx 20250108-18:45:42    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_W.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_W.nc
+PrEx 20250108-18:45:52   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250111_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:45:52    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_W.nc > /dev/null
+PrEx 20250108-18:45:52   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_W.nc > /dev/null [ok]
+PrEx 20250108-18:45:52 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250111_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:45:52 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250111_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/W20250111-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250112_ALL_grid_T.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_T.nc'...
+PrEx 20250108-18:45:52    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_T.nc
+PrEx 20250108-18:46:06   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:46:06    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_T.nc > /dev/null
+PrEx 20250108-18:46:06   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_T.nc > /dev/null [ok]
+PrEx 20250108-18:46:06 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:46:06 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250112_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250112-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250112_ALL_grid_U.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_U.nc'...
+PrEx 20250108-18:46:06    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_U.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_U.nc
+PrEx 20250108-18:46:15   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:46:15    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_U.nc > /dev/null
+PrEx 20250108-18:46:15   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_U.nc > /dev/null [ok]
+PrEx 20250108-18:46:15 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:46:15 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250112_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/U20250112-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250112_ALL_grid_V.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_V.nc'...
+PrEx 20250108-18:46:15    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_V.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_V.nc
+PrEx 20250108-18:46:23   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:46:23    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_V.nc > /dev/null
+PrEx 20250108-18:46:23   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_V.nc > /dev/null [ok]
+PrEx 20250108-18:46:23 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:46:23 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250112_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/V20250112-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250112_ALL_grid_W.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_W.nc'...
+PrEx 20250108-18:46:23    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_W.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_W.nc
+PrEx 20250108-18:46:34   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250112_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:46:34    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_W.nc > /dev/null
+PrEx 20250108-18:46:34   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_W.nc > /dev/null [ok]
+PrEx 20250108-18:46:34 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250112_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:46:34 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250112_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/W20250112-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250113_ALL_grid_T.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_T.nc'...
+PrEx 20250108-18:46:34    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_T.nc
+PrEx 20250108-18:46:47   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:46:47    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_T.nc > /dev/null
+PrEx 20250108-18:46:47   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_T.nc > /dev/null [ok]
+PrEx 20250108-18:46:47 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:46:47 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250113_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250113-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250113_ALL_grid_U.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_U.nc'...
+PrEx 20250108-18:46:47    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_U.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_U.nc
+PrEx 20250108-18:46:55   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:46:55    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_U.nc > /dev/null
+PrEx 20250108-18:46:55   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_U.nc > /dev/null [ok]
+PrEx 20250108-18:46:55 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:46:55 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250113_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/U20250113-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250113_ALL_grid_V.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_V.nc'...
+PrEx 20250108-18:46:55    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_V.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_V.nc
+PrEx 20250108-18:47:04   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:47:04    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_V.nc > /dev/null
+PrEx 20250108-18:47:04   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_V.nc > /dev/null [ok]
+PrEx 20250108-18:47:04 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:47:04 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250113_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/V20250113-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250113_ALL_grid_W.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_W.nc'...
+PrEx 20250108-18:47:04    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_W.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_W.nc
+PrEx 20250108-18:47:14   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250113_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:47:14    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_W.nc > /dev/null
+PrEx 20250108-18:47:14   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_W.nc > /dev/null [ok]
+PrEx 20250108-18:47:14 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250113_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:47:14 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250113_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/W20250113-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250114_ALL_grid_T.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_T.nc'...
+PrEx 20250108-18:47:14    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_T.nc
+PrEx 20250108-18:47:28   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:47:28    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_T.nc > /dev/null
+PrEx 20250108-18:47:28   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_T.nc > /dev/null [ok]
+PrEx 20250108-18:47:28 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:47:28 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250114_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250114-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250114_ALL_grid_U.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_U.nc'...
+PrEx 20250108-18:47:28    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_U.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_U.nc
+PrEx 20250108-18:47:36   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:47:36    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_U.nc > /dev/null
+PrEx 20250108-18:47:36   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_U.nc > /dev/null [ok]
+PrEx 20250108-18:47:36 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:47:36 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250114_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/U20250114-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250114_ALL_grid_V.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_V.nc'...
+PrEx 20250108-18:47:36    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_V.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_V.nc
+PrEx 20250108-18:47:45   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:47:45    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_V.nc > /dev/null
+PrEx 20250108-18:47:45   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_V.nc > /dev/null [ok]
+PrEx 20250108-18:47:45 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:47:45 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250114_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/V20250114-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250114_ALL_grid_W.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_W.nc'...
+PrEx 20250108-18:47:45    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_W.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_W.nc
+PrEx 20250108-18:47:55   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250114_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:47:55    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_W.nc > /dev/null
+PrEx 20250108-18:47:55   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_W.nc > /dev/null [ok]
+PrEx 20250108-18:47:55 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250114_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:47:55 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250114_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/W20250114-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250115_ALL_grid_T.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_T.nc'...
+PrEx 20250108-18:47:55    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_T.nc
+PrEx 20250108-18:48:09   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:48:09    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_T.nc > /dev/null
+PrEx 20250108-18:48:09   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_T.nc > /dev/null [ok]
+PrEx 20250108-18:48:09 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:48:09 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250115_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250115-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250115_ALL_grid_U.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_U.nc'...
+PrEx 20250108-18:48:09    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_U.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_U.nc
+PrEx 20250108-18:48:19   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:48:19    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_U.nc > /dev/null
+PrEx 20250108-18:48:19   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_U.nc > /dev/null [ok]
+PrEx 20250108-18:48:19 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:48:19 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250115_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/U20250115-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250115_ALL_grid_V.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_V.nc'...
+PrEx 20250108-18:48:19    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_V.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_V.nc
+PrEx 20250108-18:48:28   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:48:28    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_V.nc > /dev/null
+PrEx 20250108-18:48:28   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_V.nc > /dev/null [ok]
+PrEx 20250108-18:48:28 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:48:28 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250115_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/V20250115-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250115_ALL_grid_W.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_W.nc'...
+PrEx 20250108-18:48:28    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_W.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_W.nc
+PrEx 20250108-18:48:39   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250115_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:48:39    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_W.nc > /dev/null
+PrEx 20250108-18:48:39   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_W.nc > /dev/null [ok]
+PrEx 20250108-18:48:39 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250115_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:48:39 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250115_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/W20250115-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250116_ALL_grid_T.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_T.nc'...
+PrEx 20250108-18:48:39    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_T.nc
+PrEx 20250108-18:48:53   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:48:53    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_T.nc > /dev/null
+PrEx 20250108-18:48:53   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_T.nc > /dev/null [ok]
+PrEx 20250108-18:48:53 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:48:53 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250116_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250116-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250116_ALL_grid_U.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_U.nc'...
+PrEx 20250108-18:48:53    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_U.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_U.nc
+PrEx 20250108-18:49:02   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:49:02    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_U.nc > /dev/null
+PrEx 20250108-18:49:02   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_U.nc > /dev/null [ok]
+PrEx 20250108-18:49:02 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:49:02 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250116_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/U20250116-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250116_ALL_grid_V.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_V.nc'...
+PrEx 20250108-18:49:02    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_V.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_V.nc
+PrEx 20250108-18:49:11   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:49:11    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_V.nc > /dev/null
+PrEx 20250108-18:49:11   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_V.nc > /dev/null [ok]
+PrEx 20250108-18:49:11 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:49:11 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250116_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/V20250116-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250116_ALL_grid_W.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_W.nc'...
+PrEx 20250108-18:49:12    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_W.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_W.nc
+PrEx 20250108-18:49:22   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250116_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:49:22    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_W.nc > /dev/null
+PrEx 20250108-18:49:22   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_W.nc > /dev/null [ok]
+PrEx 20250108-18:49:22 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250116_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:49:22 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250116_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/W20250116-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250117_ALL_grid_T.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_T.nc'...
+PrEx 20250108-18:49:23    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_T.nc
+PrEx 20250108-18:49:38   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:49:38    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_T.nc > /dev/null
+PrEx 20250108-18:49:38   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_T.nc > /dev/null [ok]
+PrEx 20250108-18:49:38 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:49:38 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250117_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250117-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250117_ALL_grid_U.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_U.nc'...
+PrEx 20250108-18:49:38    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_U.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_U.nc
+PrEx 20250108-18:49:46   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:49:46    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_U.nc > /dev/null
+PrEx 20250108-18:49:46   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_U.nc > /dev/null [ok]
+PrEx 20250108-18:49:46 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:49:46 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250117_ALL_grid_U.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/U20250117-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250117_ALL_grid_V.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_V.nc'...
+PrEx 20250108-18:49:46    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_V.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_V.nc
+PrEx 20250108-18:50:00   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:50:00    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_V.nc > /dev/null
+PrEx 20250108-18:50:00   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_V.nc > /dev/null [ok]
+PrEx 20250108-18:50:00 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:50:00 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250117_ALL_grid_V.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/V20250117-12:00:00.nc [Ok]
+### file [medfs-eas9_6h_20250108_20250117_ALL_grid_W.nc] does not exist => try to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_W.nc'...
+PrEx 20250108-18:50:00    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_W.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_W.nc
+PrEx 20250108-18:50:11   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250117_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-18:50:11    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_W.nc > /dev/null
+PrEx 20250108-18:50:11   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_W.nc > /dev/null [ok]
+PrEx 20250108-18:50:11 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login05.16638.1490/medfs-eas9_6h_20250108_20250117_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-18:50:11 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250117_ALL_grid_W.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/W20250117-12:00:00.nc [Ok]
+PrEx 20250108-18:50:11    > rm /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/report/opa.20250108.log.tmp
+PrEx 20250108-18:50:11   0< rm /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/report/opa.20250108.log.tmp [ok]
+EventID:2025/01/08:18:50:11 , TimeStamp:target_time_recover , ProdCycle:20250108 , TypeRegistration:bio_transfer-tl-input_forcing-fail
+PrEx 20250108-18:50:11    > rm /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/report/opa.20250108.log.tmp
+PrEx 20250108-18:50:11   0< rm /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/report/opa.20250108.log.tmp [ok]
+2025/01/08:18:50:11 , target_time_recover , 20250108 , bio_transfer-tl-input_forcing
+20250108-18:50:11 01 (004) : All files successfully downloaded!
+EventID:2025/01/08:18:50:11 , TimeStamp:target_time_recover , ProdCycle:20250108 , TypeRegistration:bio_transfer-tl-input_available-fail
+PrEx 20250108-18:50:11    > rm /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/report/opa.20250108.log.tmp
+PrEx 20250108-18:50:11   0< rm /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/report/opa.20250108.log.tmp [ok]
+2025/01/08:18:50:11 , target_time_recover , 20250108 , bio_transfer-tl-input_available
+20250108-18:50:11 00 (004) : * EXIT(opa_get.ksh) [Ok]

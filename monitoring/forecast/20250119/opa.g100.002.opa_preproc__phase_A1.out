@@ -1,0 +1,39 @@
+PrEx 20250119-15:12:00    > . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh
+PrEx 20250119-15:12:00   0< . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh [ok]
+PrEx 20250119-15:12:00    > module load autoload
+PrEx 20250119-15:12:00   0< module load autoload [ok]
+PrEx 20250119-15:12:00    > module load intelmpi/oneapi-2021--binary
+PrEx 20250119-15:12:00   0< module load intelmpi/oneapi-2021--binary [ok]
+PrEx 20250119-15:12:00    > module load mkl/oneapi-2021--binary
+PrEx 20250119-15:12:01   0< module load mkl/oneapi-2021--binary [ok]
+PrEx 20250119-15:12:01    > module load nco
+PrEx 20250119-15:12:01   0< module load nco [ok]
+PrEx 20250119-15:12:01    > module load python/3.11.7--gcc--10.2.0
+PrEx 20250119-15:12:01   0< module load python/3.11.7--gcc--10.2.0 [ok]
+PrEx 20250119-15:12:01    > ulimit -s unlimited
+PrEx 20250119-15:12:01   0< ulimit -s unlimited [ok]
+### OPA_RUNDATE ...................... '20250119'
+### OPA_WEEKDAY ...................... '0'
+### OPA_TODAY ........................ '20250119'
+### OPA_DEFAULT_RUNDATE .............. '20250119'
+### OPA_PRODDATE ..................... '20250119'
+### OPA_RESTART_RUNDATE .............. '20250118'
+### OPA_RESTART_WEEKDAY .............. '6'
+20250119-15:12:01 00 (002) : * START(opa_preproc__phase_A1.ksh)
+PrEx 20250119-15:12:01    > ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/T20250128-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/T20250129-12:00:00.nc
+PrEx 20250119-15:12:01   0< ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/T20250128-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/T20250129-12:00:00.nc [ok]
+PrEx 20250119-15:12:01    > ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/U20250128-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/U20250129-12:00:00.nc
+PrEx 20250119-15:12:01   0< ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/U20250128-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/U20250129-12:00:00.nc [ok]
+PrEx 20250119-15:12:01    > ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/V20250128-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/V20250129-12:00:00.nc
+PrEx 20250119-15:12:01   0< ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/V20250128-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/V20250129-12:00:00.nc [ok]
+PrEx 20250119-15:12:01    > ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/W20250128-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/W20250129-12:00:00.nc
+PrEx 20250119-15:12:01   0< ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/W20250128-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/W20250129-12:00:00.nc [ok]
+PrEx 20250119-15:12:01    > ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/T20250118-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/T20250118-00:00:00.nc
+PrEx 20250119-15:12:01   0< ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/T20250118-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/T20250118-00:00:00.nc [ok]
+PrEx 20250119-15:12:01    > ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/U20250118-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/U20250118-00:00:00.nc
+PrEx 20250119-15:12:01   0< ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/U20250118-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/U20250118-00:00:00.nc [ok]
+PrEx 20250119-15:12:01    > ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/V20250118-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/V20250118-00:00:00.nc
+PrEx 20250119-15:12:01   0< ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/V20250118-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/V20250118-00:00:00.nc [ok]
+PrEx 20250119-15:12:01    > ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/W20250118-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/W20250118-00:00:00.nc
+PrEx 20250119-15:12:01   0< ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/W20250118-12:00:00.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS/W20250118-00:00:00.nc [ok]
+20250119-15:12:01 00 (002) : * EXIT(opa_preproc__phase_A1.ksh) [Ok] (from last executed command)

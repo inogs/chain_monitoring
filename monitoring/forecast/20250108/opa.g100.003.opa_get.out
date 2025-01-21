@@ -1,0 +1,52 @@
+PrEx 20250108-17:05:59    > . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh
+PrEx 20250108-17:05:59   0< . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh [ok]
+PrEx 20250108-17:05:59    > module load autoload
+PrEx 20250108-17:05:59   0< module load autoload [ok]
+PrEx 20250108-17:05:59    > module load intelmpi/oneapi-2021--binary
+PrEx 20250108-17:05:59   0< module load intelmpi/oneapi-2021--binary [ok]
+PrEx 20250108-17:05:59    > module load mkl/oneapi-2021--binary
+PrEx 20250108-17:05:59   0< module load mkl/oneapi-2021--binary [ok]
+PrEx 20250108-17:05:59    > module load nco
+PrEx 20250108-17:05:59   0< module load nco [ok]
+PrEx 20250108-17:05:59    > module load python/3.11.7--gcc--10.2.0
+PrEx 20250108-17:05:59   0< module load python/3.11.7--gcc--10.2.0 [ok]
+PrEx 20250108-17:05:59    > ulimit -s unlimited
+PrEx 20250108-17:05:59   0< ulimit -s unlimited [ok]
+PrEx 20250108-17:05:59    > opa_set_default_run  
+PrEx 20250108-17:05:59   0< opa_set_default_run   [ok]
+PrEx 20250108-17:05:59    > opa_set_run forecast 20250108
+### OPA_RUNDATE ...................... '20250108'
+### OPA_WEEKDAY ...................... '3'
+### OPA_TODAY ........................ ''
+### OPA_DEFAULT_RUNDATE .............. '20250108'
+### OPA_PRODDATE ..................... '20250108'
+### OPA_RESTART_RUNDATE .............. '20250107'
+### OPA_RESTART_WEEKDAY .............. '2'
+PrEx 20250108-17:05:59   0< opa_set_run forecast 20250108 [ok]
+RECOVERY:		false
+DISABLE_DOWNLOAD:	false
+20250108-17:05:59 00 (003) : * START(opa_get.ksh)
+OPAOPER forecast
+   0) T20250107-12:00:00.nc
+   4) T20250108-12:00:00.nc
+   8) T20250109-12:00:00.nc
+  12) T20250110-12:00:00.nc
+  16) T20250111-12:00:00.nc
+  20) T20250112-12:00:00.nc
+  24) T20250113-12:00:00.nc
+  28) T20250114-12:00:00.nc
+  32) T20250115-12:00:00.nc
+  36) T20250116-12:00:00.nc
+  40) T20250117-12:00:00.nc
+   0) forecast/20250108/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc
+   1) analysis/20250108/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc
+PrEx 20250108-17:06:00    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc > /dev/null
+/g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc: NetCDF: HDF error
+PrEx 20250108-17:06:01   1< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc > /dev/null [KO]
+PrEx 20250108-17:06:01    >  echo " get /atmforcing/ecmwf_0100/netcdf//forecast/20250108/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+Connected to dtn01.cmcc.it.
+sftp>  get /atmforcing/ecmwf_0100/netcdf//forecast/20250108/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF 
+Fetching /atmforcing/ecmwf_0100/netcdf//forecast/20250108/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc
+Couldn't write to "/g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc": Disk quota exceeded
+PrEx 20250108-17:06:03   0<  echo " get /atmforcing/ecmwf_0100/netcdf//forecast/20250108/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-17:06:03    > /g100/home/usera07ogs/a07og

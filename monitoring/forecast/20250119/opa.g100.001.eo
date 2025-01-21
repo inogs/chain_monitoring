@@ -1,0 +1,72 @@
+>>> command '/g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_log_job.ksh begin' starting...
+PrEx 20250119-15:00:07    > . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh
+PrEx 20250119-15:00:07   0< . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh [ok]
+PrEx 20250119-15:00:07    > module load autoload
+PrEx 20250119-15:00:07   0< module load autoload [ok]
+PrEx 20250119-15:00:07    > module load intelmpi/oneapi-2021--binary
+PrEx 20250119-15:00:08   0< module load intelmpi/oneapi-2021--binary [ok]
+PrEx 20250119-15:00:08    > module load mkl/oneapi-2021--binary
+PrEx 20250119-15:00:08   0< module load mkl/oneapi-2021--binary [ok]
+PrEx 20250119-15:00:08    > module load nco
+ 
+ 
+ 
+ 
+ 
+PrEx 20250119-15:00:08   0< module load nco [ok]
+PrEx 20250119-15:00:08    > module load python/3.11.7--gcc--10.2.0
+PrEx 20250119-15:00:08   0< module load python/3.11.7--gcc--10.2.0 [ok]
+PrEx 20250119-15:00:08    > ulimit -s unlimited
+PrEx 20250119-15:00:08   0< ulimit -s unlimited [ok]
+PrEx 20250119-15:00:08    > opa_set_default_run 
+PrEx 20250119-15:00:08   0< opa_set_default_run  [ok]
+PrEx 20250119-15:00:08    > opa_set_run forecast 20250119
+### OPA_RUNDATE ...................... '20250119'
+### OPA_WEEKDAY ...................... '0'
+### OPA_TODAY ........................ ''
+### OPA_DEFAULT_RUNDATE .............. '20250119'
+### OPA_PRODDATE ..................... '20250119'
+### OPA_RESTART_RUNDATE .............. '20250118'
+### OPA_RESTART_WEEKDAY .............. '6'
+PrEx 20250119-15:00:08   0< opa_set_run forecast 20250119 [ok]
+20250119-15:00:08 00 (001) : === ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+20250119-15:00:08 00 (001) : === JOB '14987701' STARTED
+20250119-15:00:08 01 (001) : ===  #PROCS: 1
+20250119-15:00:08 01 (001) : ===  #NODES: 1
+<<< command '/g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_log_job.ksh begin' completed [0]
+>>> /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/20250119/opa.g100.001.step.pre
+### RM_PROCS=
+### RM_NUM_PROCS=1
+### RM_NODES=
+### RM_NUM_NODES=1
+/g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_pre_wrapper.ksh
+PrEx 20250119-15:00:08    > . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh
+PrEx 20250119-15:00:08   0< . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh [ok]
+PrEx 20250119-15:00:08    > module load autoload
+PrEx 20250119-15:00:08   0< module load autoload [ok]
+PrEx 20250119-15:00:08    > module load intelmpi/oneapi-2021--binary
+PrEx 20250119-15:00:08   0< module load intelmpi/oneapi-2021--binary [ok]
+PrEx 20250119-15:00:08    > module load mkl/oneapi-2021--binary
+PrEx 20250119-15:00:08   0< module load mkl/oneapi-2021--binary [ok]
+PrEx 20250119-15:00:08    > module load nco
+ 
+ 
+ 
+ 
+ 
+PrEx 20250119-15:00:09   0< module load nco [ok]
+PrEx 20250119-15:00:09    > module load python/3.11.7--gcc--10.2.0
+PrEx 20250119-15:00:09   0< module load python/3.11.7--gcc--10.2.0 [ok]
+PrEx 20250119-15:00:09    > ulimit -s unlimited
+PrEx 20250119-15:00:09   0< ulimit -s unlimited [ok]
+### OPA_RUNDATE ...................... '20250119'
+### OPA_WEEKDAY ...................... '0'
+### OPA_TODAY ........................ '20250119'
+### OPA_DEFAULT_RUNDATE .............. '20250119'
+### OPA_PRODDATE ..................... '20250119'
+### OPA_RESTART_RUNDATE .............. '20250118'
+### OPA_RESTART_WEEKDAY .............. '6'
+20250119-15:00:09 00 (001) : * START(opa_pre_wrapper.ksh)
+20250119-15:00:09 00 (001) : !!! STEP 'pre' STARTED 001
+20250119-15:00:09 00 (001) : ### preprocessing input files...
+PrEx 20250119-15:00:09    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_preproc.ksh  1>/g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/20250119/opa.g100.001.opa_preproc.out 2>&1

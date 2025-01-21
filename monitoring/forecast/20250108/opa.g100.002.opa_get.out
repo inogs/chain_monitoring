@@ -1,0 +1,254 @@
+PrEx 20250108-15:10:10    > . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh
+PrEx 20250108-15:10:10   0< . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh [ok]
+PrEx 20250108-15:10:10    > module load autoload
+PrEx 20250108-15:10:10   0< module load autoload [ok]
+PrEx 20250108-15:10:10    > module load intelmpi/oneapi-2021--binary
+PrEx 20250108-15:10:10   0< module load intelmpi/oneapi-2021--binary [ok]
+PrEx 20250108-15:10:10    > module load mkl/oneapi-2021--binary
+PrEx 20250108-15:10:10   0< module load mkl/oneapi-2021--binary [ok]
+PrEx 20250108-15:10:10    > module load nco
+PrEx 20250108-15:10:10   0< module load nco [ok]
+PrEx 20250108-15:10:10    > module load python/3.11.7--gcc--10.2.0
+PrEx 20250108-15:10:10   0< module load python/3.11.7--gcc--10.2.0 [ok]
+PrEx 20250108-15:10:10    > ulimit -s unlimited
+PrEx 20250108-15:10:10   0< ulimit -s unlimited [ok]
+PrEx 20250108-15:10:10    > opa_set_default_run  
+PrEx 20250108-15:10:10   0< opa_set_default_run   [ok]
+PrEx 20250108-15:10:10    > opa_set_run forecast 20250108
+### OPA_RUNDATE ...................... '20250108'
+### OPA_WEEKDAY ...................... '3'
+### OPA_TODAY ........................ ''
+### OPA_DEFAULT_RUNDATE .............. '20250108'
+### OPA_PRODDATE ..................... '20250108'
+### OPA_RESTART_RUNDATE .............. '20250107'
+### OPA_RESTART_WEEKDAY .............. '2'
+PrEx 20250108-15:10:10   0< opa_set_run forecast 20250108 [ok]
+RECOVERY:		false
+DISABLE_DOWNLOAD:	false
+20250108-15:10:10 00 (002) : * START(opa_get.ksh)
+OPAOPER forecast
+   0) T20250107-12:00:00.nc
+   4) T20250108-12:00:00.nc
+   8) T20250109-12:00:00.nc
+  12) T20250110-12:00:00.nc
+  16) T20250111-12:00:00.nc
+  20) T20250112-12:00:00.nc
+  24) T20250113-12:00:00.nc
+  28) T20250114-12:00:00.nc
+  32) T20250115-12:00:00.nc
+  36) T20250116-12:00:00.nc
+  40) T20250117-12:00:00.nc
+   0) forecast/20250108/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc
+   1) analysis/20250108/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc
+PrEx 20250108-15:10:11    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc > /dev/null
+/g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc: NetCDF: HDF error
+PrEx 20250108-15:10:11   1< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc > /dev/null [KO]
+PrEx 20250108-15:10:11    >  echo " get /atmforcing/ecmwf_0100/netcdf//forecast/20250108/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0664 for '/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key": bad permissions
+Connected to dtn01.cmcc.it.
+sftp>  get /atmforcing/ecmwf_0100/netcdf//forecast/20250108/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF 
+Fetching /atmforcing/ecmwf_0100/netcdf//forecast/20250108/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc
+Couldn't write to "/g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc": Disk quota exceeded
+PrEx 20250108-15:10:13   0<  echo " get /atmforcing/ecmwf_0100/netcdf//forecast/20250108/20250108_20250118-ECMWF---AM0100-MEDATL-b20250108_fc00-fv11.00.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-15:10:13    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc > /dev/null
+/g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc: NetCDF: HDF error
+PrEx 20250108-15:10:13   1< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc > /dev/null [KO]
+PrEx 20250108-15:10:13    >  echo " get /atmforcing/ecmwf_0100/netcdf//analysis/20250108/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0664 for '/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key": bad permissions
+Connected to dtn01.cmcc.it.
+sftp>  get /atmforcing/ecmwf_0100/netcdf//analysis/20250108/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF 
+Fetching /atmforcing/ecmwf_0100/netcdf//analysis/20250108/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc
+Couldn't write to "/g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc": Disk quota exceeded
+PrEx 20250108-15:10:14   0<  echo " get /atmforcing/ecmwf_0100/netcdf//analysis/20250108/20250107-ECMWF---AM0100-MEDATL-b20250108_an-fv11.00.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/ECMWF " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+@@@ [opa_get_files]: _a_f_d=[f]
+timeout=[20250108 09:00:00] [1736326800]
+PrEx 20250108-15:10:15 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 [Ok]
+DEBUG: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc esiste, _FORCE_DOWNLOAD=false
+### file [medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc] already exists, and FORCE_DOWNLOAD=false => try to resume download
+cp: error writing '/g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc': Disk quota exceeded
+PrEx 20250108-15:10:15 < cp -p /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 [Ok]
+PrEx 20250108-15:10:15    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null
+/g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc: NetCDF: Unknown file format
+PrEx 20250108-15:10:15   1< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null [KO]
+20250108-15:10:15 01 (002) : file [medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc] : check failed!
+PrEx 20250108-15:10:15 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-15:10:15 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250107-12:00:00.nc [Ok]
+20250108-15:10:15 01 (002) : file [T20250107-12:00:00.nc] not downloaded or corrupted - try again to download
+### [1] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc'...
+PrEx 20250108-15:10:15    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0664 for '/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key": bad permissions
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc
+Couldn't write to "/g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc": Disk quota exceeded
+PrEx 20250108-15:10:16   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-15:10:16    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null
+/g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc: NetCDF: HDF error
+PrEx 20250108-15:10:16   1< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null [KO]
+20250108-15:10:16 01 (002) : file [medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc] : check failed!
+PrEx 20250108-15:10:16 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-15:10:16 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250107-12:00:00.nc [Ok]
+20250108-15:10:16 01 (002) : file [T20250107-12:00:00.nc] not downloaded or corrupted - try again to download
+### [2] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc'...
+PrEx 20250108-15:10:16    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0664 for '/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key": bad permissions
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc
+Couldn't write to "/g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc": Disk quota exceeded
+PrEx 20250108-15:10:18   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-15:10:18    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null
+/g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc: NetCDF: HDF error
+PrEx 20250108-15:10:18   1< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null [KO]
+20250108-15:10:18 01 (002) : file [medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc] : check failed!
+PrEx 20250108-15:10:18 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-15:10:18 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250107-12:00:00.nc [Ok]
+20250108-15:10:18 01 (002) : file [T20250107-12:00:00.nc] not downloaded or corrupted - try again to download
+### [3] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc'...
+PrEx 20250108-15:10:18    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0664 for '/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key": bad permissions
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc
+Couldn't write to "/g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc": Disk quota exceeded
+PrEx 20250108-15:10:19   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-15:10:19    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null
+/g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc: NetCDF: HDF error
+PrEx 20250108-15:10:19   1< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null [KO]
+20250108-15:10:19 01 (002) : file [medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc] : check failed!
+PrEx 20250108-15:10:19 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-15:10:19 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250107-12:00:00.nc [Ok]
+20250108-15:10:19 01 (002) : file [T20250107-12:00:00.nc] not downloaded or corrupted - try again to download
+### [4] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc'...
+PrEx 20250108-15:10:19    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0664 for '/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key": bad permissions
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc
+Couldn't write to "/g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc": Disk quota exceeded
+PrEx 20250108-15:10:20   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-15:10:20    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null
+/g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc: NetCDF: HDF error
+PrEx 20250108-15:10:20   1< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null [KO]
+20250108-15:10:20 01 (002) : file [medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc] : check failed!
+PrEx 20250108-15:10:20 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-15:10:20 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250107-12:00:00.nc [Ok]
+20250108-15:10:20 01 (002) : file [T20250107-12:00:00.nc] not downloaded or corrupted - try again to download
+### [5] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc'...
+PrEx 20250108-15:10:20    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0664 for '/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key": bad permissions
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc
+Couldn't write to "/g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc": Disk quota exceeded
+PrEx 20250108-15:10:21   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-15:10:21    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null
+/g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc: NetCDF: HDF error
+PrEx 20250108-15:10:21   1< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null [KO]
+20250108-15:10:21 01 (002) : file [medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc] : check failed!
+PrEx 20250108-15:10:21 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-15:10:21 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250107-12:00:00.nc [Ok]
+20250108-15:10:22 01 (002) : file [T20250107-12:00:00.nc] not downloaded or corrupted - try again to download
+### [6] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc'...
+PrEx 20250108-15:10:22    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0664 for '/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key": bad permissions
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc
+Couldn't write to "/g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc": Disk quota exceeded
+PrEx 20250108-15:10:23   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-15:10:23    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null
+/g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc: NetCDF: HDF error
+PrEx 20250108-15:10:23   1< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null [KO]
+20250108-15:10:23 01 (002) : file [medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc] : check failed!
+PrEx 20250108-15:10:23 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-15:10:23 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250107-12:00:00.nc [Ok]
+20250108-15:10:23 01 (002) : file [T20250107-12:00:00.nc] not downloaded or corrupted - try again to download
+### [7] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc'...
+PrEx 20250108-15:10:23    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0664 for '/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key": bad permissions
+Connected to dtn01.cmcc.it.
+sftp>  get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 
+Fetching /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc to /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc
+Couldn't write to "/g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc": Disk quota exceeded
+PrEx 20250108-15:10:24   0<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [ok]
+PrEx 20250108-15:10:24    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null
+/g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump: /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc: NetCDF: HDF error
+PrEx 20250108-15:10:24   1< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncdump -h /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc > /dev/null [KO]
+20250108-15:10:24 01 (002) : file [medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc] : check failed!
+PrEx 20250108-15:10:24 < mv     /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS [Ok]
+PrEx 20250108-15:10:24 < ln -fs /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/CMCC_PHYS/T20250107-12:00:00.nc [Ok]
+20250108-15:10:24 01 (002) : file [T20250107-12:00:00.nc] not downloaded or corrupted - try again to download
+### [8] trying to download '/medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc'...
+PrEx 20250108-15:10:24    >  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it  
+ssh_dispatch_run_fatal: Connection to 90.147.177.51 port 20022: Connection timed out
+Connection closed
+PrEx 20250108-15:26:31 255<  echo " get /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc /g100_work/OGS_prodC/OPA/V11C/prod/inpdir/forecast/20250108/CMCC_PHYS/login04.57732.29505 " | sftp -i /g100/home/usera07ogs/a07ogs00/OPA/V11C/etc/sftp-config/g100_cmcc-key -P 20022 ogs@dtn01.cmcc.it   [KO]
+###DBG: now=[20250108 14:26:31 (1736346391)], timeout=[20250108 09:00:00 (1736326800)], exceeded=[true]; count=[8/5], exceeded=[true]
+20250108-15:26:31 00 (002) : INPUT TIMEOUT - missing file [medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc] - aborting
+PrEx 20250108-15:26:31    > rm /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/report/opa.20250108.log.tmp
+rm: cannot remove '/g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/report/opa.20250108.log.tmp': No such file or directory
+PrEx 20250108-15:26:31   1< rm /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/report/opa.20250108.log.tmp [KO]
+EventID:2025/01/08:15:26:31 , TimeStamp:target_time_fail , ProdCycle:20250108 , TypeRegistration:bio_transfer-tl-input_forcing-fail, TargetTime:202501080400
+20250108-15:26:31 01 (002) : WARNING: 1 missing files:
+20250108-15:26:31 02 (002) : ================================================================================
+20250108-15:26:31 02 (002) :   0) /medsea_oce/nrt/op/out/mfs_eas9/o//20250108/medfs-eas9_6h_20250108_20250107_ALL_grid_T.nc
+20250108-15:26:31 02 (002) : ================================================================================
+PrEx 20250108-15:26:31    > rm /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/report/opa.20250108.log.tmp
+PrEx 20250108-15:26:31   0< rm /g100/home/usera07ogs/a07ogs00/OPA/V11C/log/forecast/report/opa.20250108.log.tmp [ok]
+EventID:2025/01/08:15:26:31 , TimeStamp:target_time_fail , ProdCycle:20250108 , TypeRegistration:bio_transfer-tl-input_available-fail, TargetTime:202501080400
+20250108-15:26:31 00 (002) : * EXIT(opa_get.ksh) [ERR:1]

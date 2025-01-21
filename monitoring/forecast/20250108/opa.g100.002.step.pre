@@ -1,0 +1,52 @@
+#!/bin/ksh
+
+# export of variables that are used in scripts:
+export OPA_HOME="/g100/home/usera07ogs/a07ogs00/OPA/V11C"
+export OPA_HOSTNAME="g100"
+export RT_OPA_BATCH="true"
+export RT_OPA_RUNDATE="20250108"
+export RT_OPA_RUNTYPE="forecast"
+export RT_OPA_RESTART_WEEKDAY="2"
+export RT_OPA_KEEP_INPUT="true"
+export RT_OPA_TASKS="240"
+
+export RT_OPA_DA_ENABLE="true"
+
+export RT_OPA_FORCE_DOWNLOAD="false"
+
+export RT_OPA_TRANSFER_PRO="true"
+export RT_OPA_UPDATE_TDS_CATALOG="true"
+export RT_OPA_TRANSFER_IMAGES="true"
+
+export RT_OPA_ENABLE_PRE_PHASES=""
+export RT_OPA_DISABLE_PRE_PHASES=""
+
+export RT_OPA_ENABLE_MODEL_PHASES=""
+export RT_OPA_DISABLE_MODEL_PHASES=""
+
+export RT_OPA_ENABLE_POST_PHASES=""
+export RT_OPA_DISABLE_POST_PHASES=""
+
+export RT_OPA_INPUT_TIMEOUT_ENABLED="true"
+export RT_OPA_INPUT_ABORT_ON_ERRORS="true"
+
+export RT_OPA_RUNID="002"
+
+export RT_OPA_DEBUG_MODE="false"
+
+export RT_OPA_SIMULATE_TRANSFER="false"
+
+export RT_OPA_RECOVERY_MODE="false"
+
+cat <<EofHdr
+### RM_PROCS=$RM_PROCS
+### RM_NUM_PROCS=$RM_NUM_PROCS
+### RM_NODES=$RM_NODES
+### RM_NUM_NODES=$RM_NUM_NODES
+EofHdr
+
+# Launch the opa_wrapper
+command="/g100/home/usera07ogs/a07ogs00/OPA/V11C/bin/opa_pre_wrapper.ksh"
+echo "$command"
+$command
+

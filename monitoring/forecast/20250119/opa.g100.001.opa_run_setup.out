@@ -1,0 +1,167 @@
+PrEx 20250119-15:00:09    > . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh
+PrEx 20250119-15:00:09   0< . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh [ok]
+PrEx 20250119-15:00:09    > module load autoload
+PrEx 20250119-15:00:10   0< module load autoload [ok]
+PrEx 20250119-15:00:10    > module load intelmpi/oneapi-2021--binary
+PrEx 20250119-15:00:10   0< module load intelmpi/oneapi-2021--binary [ok]
+PrEx 20250119-15:00:10    > module load mkl/oneapi-2021--binary
+PrEx 20250119-15:00:10   0< module load mkl/oneapi-2021--binary [ok]
+PrEx 20250119-15:00:10    > module load nco
+PrEx 20250119-15:00:10   0< module load nco [ok]
+PrEx 20250119-15:00:10    > module load python/3.11.7--gcc--10.2.0
+PrEx 20250119-15:00:10   0< module load python/3.11.7--gcc--10.2.0 [ok]
+PrEx 20250119-15:00:10    > ulimit -s unlimited
+PrEx 20250119-15:00:10   0< ulimit -s unlimited [ok]
+### OPA_RUNDATE ...................... '20250119'
+### OPA_WEEKDAY ...................... '0'
+### OPA_TODAY ........................ '20250119'
+### OPA_DEFAULT_RUNDATE .............. '20250119'
+### OPA_PRODDATE ..................... '20250119'
+### OPA_RESTART_RUNDATE .............. '20250118'
+### OPA_RESTART_WEEKDAY .............. '6'
+20250119-15:00:10 00 (001) : * START(opa_run_setup.ksh)
+20250119-15:00:10 01 (001) : cleaning directory [MODEL] ...
+PrEx 20250119-15:00:10    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL'
+PrEx 20250119-15:00:11   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL' [ok]
+20250119-15:00:11 00 (001) : cleaning directory [MODEL] [Ok]
+PrEx 20250119-15:00:11 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL [Ok]
+20250119-15:00:11 00 (001) : making directory [MODEL] [Ok]
+20250119-15:00:11 01 (001) : cleaning directory [MODEL/BC] ...
+PrEx 20250119-15:00:11    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/BC'
+PrEx 20250119-15:00:11   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/BC' [ok]
+20250119-15:00:11 00 (001) : cleaning directory [MODEL/BC] [Ok]
+PrEx 20250119-15:00:11 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/BC [Ok]
+20250119-15:00:11 00 (001) : making directory [MODEL/BC] [Ok]
+20250119-15:00:11 01 (001) : cleaning directory [MODEL/FORCINGS] ...
+PrEx 20250119-15:00:11    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/FORCINGS'
+PrEx 20250119-15:00:11   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/FORCINGS' [ok]
+20250119-15:00:11 00 (001) : cleaning directory [MODEL/FORCINGS] [Ok]
+PrEx 20250119-15:00:11 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/FORCINGS [Ok]
+20250119-15:00:11 00 (001) : making directory [MODEL/FORCINGS] [Ok]
+20250119-15:00:11 01 (001) : cleaning directory [MODEL/DELTA_T] ...
+PrEx 20250119-15:00:11    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/DELTA_T'
+PrEx 20250119-15:00:11   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/DELTA_T' [ok]
+20250119-15:00:11 00 (001) : cleaning directory [MODEL/DELTA_T] [Ok]
+PrEx 20250119-15:00:11 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/DELTA_T [Ok]
+20250119-15:00:11 00 (001) : making directory [MODEL/DELTA_T] [Ok]
+20250119-15:00:11 01 (001) : cleaning directory [MODEL/AVE_FREQ_1] ...
+PrEx 20250119-15:00:11    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/AVE_FREQ_1'
+PrEx 20250119-15:00:11   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/AVE_FREQ_1' [ok]
+20250119-15:00:11 00 (001) : cleaning directory [MODEL/AVE_FREQ_1] [Ok]
+PrEx 20250119-15:00:11 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/AVE_FREQ_1 [Ok]
+20250119-15:00:11 00 (001) : making directory [MODEL/AVE_FREQ_1] [Ok]
+20250119-15:00:11 01 (001) : cleaning directory [MODEL/AVE_FREQ_2] ...
+PrEx 20250119-15:00:11    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/AVE_FREQ_2'
+PrEx 20250119-15:00:11   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/AVE_FREQ_2' [ok]
+20250119-15:00:11 00 (001) : cleaning directory [MODEL/AVE_FREQ_2] [Ok]
+PrEx 20250119-15:00:11 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/AVE_FREQ_2 [Ok]
+20250119-15:00:11 00 (001) : making directory [MODEL/AVE_FREQ_2] [Ok]
+20250119-15:00:11 01 (001) : cleaning directory [MODEL/AVE_FREQ_3] ...
+PrEx 20250119-15:00:11    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/AVE_FREQ_3'
+PrEx 20250119-15:00:11   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/AVE_FREQ_3' [ok]
+20250119-15:00:11 00 (001) : cleaning directory [MODEL/AVE_FREQ_3] [Ok]
+PrEx 20250119-15:00:11 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/AVE_FREQ_3 [Ok]
+20250119-15:00:11 00 (001) : making directory [MODEL/AVE_FREQ_3] [Ok]
+20250119-15:00:11 01 (001) : cleaning directory [MODEL/RESTARTS] ...
+PrEx 20250119-15:00:11    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/RESTARTS'
+PrEx 20250119-15:00:11   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/RESTARTS' [ok]
+20250119-15:00:11 00 (001) : cleaning directory [MODEL/RESTARTS] [Ok]
+PrEx 20250119-15:00:11 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/RESTARTS [Ok]
+20250119-15:00:11 00 (001) : making directory [MODEL/RESTARTS] [Ok]
+20250119-15:00:11 01 (001) : cleaning directory [MODEL/DA__FREQ_1] ...
+PrEx 20250119-15:00:11    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/DA__FREQ_1'
+PrEx 20250119-15:00:11   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/DA__FREQ_1' [ok]
+20250119-15:00:11 00 (001) : cleaning directory [MODEL/DA__FREQ_1] [Ok]
+PrEx 20250119-15:00:12 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/DA__FREQ_1 [Ok]
+20250119-15:00:12 00 (001) : making directory [MODEL/DA__FREQ_1] [Ok]
+20250119-15:00:12 01 (001) : cleaning directory [MODEL/bcs] ...
+PrEx 20250119-15:00:12    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/bcs'
+PrEx 20250119-15:00:12   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/bcs' [ok]
+20250119-15:00:12 00 (001) : cleaning directory [MODEL/bcs] [Ok]
+PrEx 20250119-15:00:12 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/bcs [Ok]
+20250119-15:00:12 00 (001) : making directory [MODEL/bcs] [Ok]
+20250119-15:00:12 01 (001) : cleaning directory [MODEL/OPTICS] ...
+PrEx 20250119-15:00:12    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/OPTICS'
+PrEx 20250119-15:00:12   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/OPTICS' [ok]
+20250119-15:00:12 00 (001) : cleaning directory [MODEL/OPTICS] [Ok]
+PrEx 20250119-15:00:12 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/MODEL/OPTICS [Ok]
+20250119-15:00:12 00 (001) : making directory [MODEL/OPTICS] [Ok]
+20250119-15:00:12 01 (001) : cleaning directory [POSTPROC] ...
+PrEx 20250119-15:00:12    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC'
+PrEx 20250119-15:00:20   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC' [ok]
+20250119-15:00:20 00 (001) : cleaning directory [POSTPROC] [Ok]
+PrEx 20250119-15:00:20 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC [Ok]
+20250119-15:00:20 00 (001) : making directory [POSTPROC] [Ok]
+20250119-15:00:20 01 (001) : cleaning directory [POSTPROC/AVE_FREQ_1] ...
+PrEx 20250119-15:00:20    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_1'
+PrEx 20250119-15:00:20   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_1' [ok]
+20250119-15:00:20 00 (001) : cleaning directory [POSTPROC/AVE_FREQ_1] [Ok]
+PrEx 20250119-15:00:20 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_1 [Ok]
+20250119-15:00:20 00 (001) : making directory [POSTPROC/AVE_FREQ_1] [Ok]
+20250119-15:00:20 01 (001) : cleaning directory [POSTPROC/AVE_FREQ_1/INTEGRALS] ...
+PrEx 20250119-15:00:20    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_1/INTEGRALS'
+PrEx 20250119-15:00:20   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_1/INTEGRALS' [ok]
+20250119-15:00:20 00 (001) : cleaning directory [POSTPROC/AVE_FREQ_1/INTEGRALS] [Ok]
+PrEx 20250119-15:00:20 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_1/INTEGRALS [Ok]
+20250119-15:00:20 00 (001) : making directory [POSTPROC/AVE_FREQ_1/INTEGRALS] [Ok]
+20250119-15:00:20 01 (001) : cleaning directory [POSTPROC/AVE_FREQ_1/STAT_PROFILES] ...
+PrEx 20250119-15:00:20    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_1/STAT_PROFILES'
+PrEx 20250119-15:00:20   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_1/STAT_PROFILES' [ok]
+20250119-15:00:20 00 (001) : cleaning directory [POSTPROC/AVE_FREQ_1/STAT_PROFILES] [Ok]
+PrEx 20250119-15:00:20 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_1/STAT_PROFILES [Ok]
+20250119-15:00:20 00 (001) : making directory [POSTPROC/AVE_FREQ_1/STAT_PROFILES] [Ok]
+20250119-15:00:20 01 (001) : cleaning directory [POSTPROC/AVE_FREQ_1/PROFILES] ...
+PrEx 20250119-15:00:20    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_1/PROFILES'
+PrEx 20250119-15:00:20   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_1/PROFILES' [ok]
+20250119-15:00:20 00 (001) : cleaning directory [POSTPROC/AVE_FREQ_1/PROFILES] [Ok]
+PrEx 20250119-15:00:20 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_1/PROFILES [Ok]
+20250119-15:00:20 00 (001) : making directory [POSTPROC/AVE_FREQ_1/PROFILES] [Ok]
+20250119-15:00:20 01 (001) : cleaning directory [POSTPROC/AVE_FREQ_2] ...
+PrEx 20250119-15:00:20    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_2'
+PrEx 20250119-15:00:20   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_2' [ok]
+20250119-15:00:20 00 (001) : cleaning directory [POSTPROC/AVE_FREQ_2] [Ok]
+PrEx 20250119-15:00:20 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_2 [Ok]
+20250119-15:00:20 00 (001) : making directory [POSTPROC/AVE_FREQ_2] [Ok]
+20250119-15:00:20 01 (001) : cleaning directory [POSTPROC/AVE_FREQ_2/INTEGRALS] ...
+PrEx 20250119-15:00:20    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_2/INTEGRALS'
+PrEx 20250119-15:00:20   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_2/INTEGRALS' [ok]
+20250119-15:00:20 00 (001) : cleaning directory [POSTPROC/AVE_FREQ_2/INTEGRALS] [Ok]
+PrEx 20250119-15:00:20 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_2/INTEGRALS [Ok]
+20250119-15:00:20 00 (001) : making directory [POSTPROC/AVE_FREQ_2/INTEGRALS] [Ok]
+20250119-15:00:20 01 (001) : cleaning directory [POSTPROC/AVE_FREQ_2/STAT_PROFILES] ...
+PrEx 20250119-15:00:20    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_2/STAT_PROFILES'
+PrEx 20250119-15:00:20   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_2/STAT_PROFILES' [ok]
+20250119-15:00:20 00 (001) : cleaning directory [POSTPROC/AVE_FREQ_2/STAT_PROFILES] [Ok]
+PrEx 20250119-15:00:20 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_2/STAT_PROFILES [Ok]
+20250119-15:00:20 00 (001) : making directory [POSTPROC/AVE_FREQ_2/STAT_PROFILES] [Ok]
+20250119-15:00:20 01 (001) : cleaning directory [POSTPROC/AVE_FREQ_2/PROFILES] ...
+PrEx 20250119-15:00:20    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_2/PROFILES'
+PrEx 20250119-15:00:20   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_2/PROFILES' [ok]
+20250119-15:00:20 00 (001) : cleaning directory [POSTPROC/AVE_FREQ_2/PROFILES] [Ok]
+PrEx 20250119-15:00:20 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/AVE_FREQ_2/PROFILES [Ok]
+20250119-15:00:20 00 (001) : making directory [POSTPROC/AVE_FREQ_2/PROFILES] [Ok]
+20250119-15:00:20 01 (001) : cleaning directory [POSTPROC/COMPRESSED_FOR_ARCHIVE] ...
+PrEx 20250119-15:00:20    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/COMPRESSED_FOR_ARCHIVE'
+PrEx 20250119-15:00:20   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/COMPRESSED_FOR_ARCHIVE' [ok]
+20250119-15:00:20 00 (001) : cleaning directory [POSTPROC/COMPRESSED_FOR_ARCHIVE] [Ok]
+PrEx 20250119-15:00:20 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/COMPRESSED_FOR_ARCHIVE [Ok]
+20250119-15:00:20 00 (001) : making directory [POSTPROC/COMPRESSED_FOR_ARCHIVE] [Ok]
+20250119-15:00:20 01 (001) : cleaning directory [POSTPROC/COMPRESSED_FOR_ARCHIVE/AVE_FREQ_1] ...
+PrEx 20250119-15:00:20    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/COMPRESSED_FOR_ARCHIVE/AVE_FREQ_1'
+PrEx 20250119-15:00:20   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/COMPRESSED_FOR_ARCHIVE/AVE_FREQ_1' [ok]
+20250119-15:00:20 00 (001) : cleaning directory [POSTPROC/COMPRESSED_FOR_ARCHIVE/AVE_FREQ_1] [Ok]
+PrEx 20250119-15:00:20 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/COMPRESSED_FOR_ARCHIVE/AVE_FREQ_1 [Ok]
+20250119-15:00:20 00 (001) : making directory [POSTPROC/COMPRESSED_FOR_ARCHIVE/AVE_FREQ_1] [Ok]
+20250119-15:00:20 01 (001) : cleaning directory [POSTPROC/COMPRESSED_FOR_ARCHIVE/RST] ...
+PrEx 20250119-15:00:20    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/COMPRESSED_FOR_ARCHIVE/RST'
+PrEx 20250119-15:00:20   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/COMPRESSED_FOR_ARCHIVE/RST' [ok]
+20250119-15:00:20 00 (001) : cleaning directory [POSTPROC/COMPRESSED_FOR_ARCHIVE/RST] [Ok]
+PrEx 20250119-15:00:20 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/POSTPROC/COMPRESSED_FOR_ARCHIVE/RST [Ok]
+20250119-15:00:20 00 (001) : making directory [POSTPROC/COMPRESSED_FOR_ARCHIVE/RST] [Ok]
+20250119-15:00:20 01 (001) : cleaning directory [CMCC_PHYS] ...
+PrEx 20250119-15:00:20    > rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS'
+PrEx 20250119-15:00:21   0< rm -rf '/g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS' [ok]
+20250119-15:00:21 00 (001) : cleaning directory [CMCC_PHYS] [Ok]
+PrEx 20250119-15:00:21 < mkdir /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/0/CMCC_PHYS [Ok]
+20250119-15:00:21 00 (001) : making directory [CMCC_PHYS] [Ok]
+20250119-15:00:21 00 (001) : * EXIT(opa_run_setup.ksh) [Ok]
