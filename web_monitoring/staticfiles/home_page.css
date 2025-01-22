@@ -6,7 +6,7 @@ body {
 div.firstRow {
     background-color: #14387F;
     width: 100%;
-    height: 130px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,22 @@ div.firstRow {
 
 img.logo {
     width: 500px;
-    height: 120px;
+    height: 140px;
+}
+
+div.secondRow {
+    margin-top: 30px;
+}
+
+p.title {
+    color: #14387F;
+    font-size: 65px;
+}
+
+p.subTitle {
+    color: #14387F;
+    margin-top: 15px;
+    font-size: 40px;
 }
 
 div.toCenter {
@@ -26,12 +41,64 @@ div.toCenter {
 
 div.chain {
     vertical-align: middle;
-    margin-top: 30px;
+    margin-top: 50px;
     border: 1px solid gray;
     background-color: lightgrey;
-    width: 600px;
-    height: 300px;
+    width: 800px;
+    height: 250px;
 }
+
+div.headerChain {
+    display: flex;
+    margin-left: 20px;
+}
+
+h1.titleChain {
+    
+    color: #14387F;
+}
+
+h2.runningChain {
+    color:#14387F;
+    margin-left: 80px;
+    margin-top: 26px;
+}
+
+div.contentChain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+
+div.progressChain {
+    border : 1px solid black;
+    background-color: gray;
+    width:90px;
+    height:75px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+div.done{
+    background-color: green;;
+}
+
+div.inProgress{
+    background-color: yellow;
+}
+
+div.failed{
+    background-color: red;
+}
+
+
+/* h1.phase {
+
+} */
 
 div.contentFooter {
     margin-top: 50px;
