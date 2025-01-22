@@ -17,10 +17,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from monitoring import views
 
 from slideshow import views as view_index
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("data/", views.main),
     path("", view_index.view_index),
 ]
