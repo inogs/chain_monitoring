@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    {% block css_block %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'home_page.css' %}">
+    {% endblock %}
+
+    {% block js_block %}
+
+
+    {% endblock js_block %}
+
+    <title>Slideshow</title>
+
+    <link rel="icon" type="image/x-icon" href="{% static 'OGS_logoB2_RGB.png' %}">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="firstRow">
+            <img src="{% static 'OGS_logoB1_RGB_W.png' %}" alt="OGS Logo" class="logo">
+        </div>
+
+        <div class="content">
+
+            <div class="toCenter">
+
+                <div class="chain">
+
+
+
+                </div>
+
+            </div>
+
+            
+
+            <div class="toCenter">
+
+                <div class="chain">
+
+
+
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="contentFooter">
+            <p class="contentFooter">© 2025 OGS</p>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
+
