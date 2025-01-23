@@ -38,6 +38,28 @@ div.toCenter {
     justify-content: center;
 }
 
+button.btn {
+    background-color: #14387F;
+    color: white;
+    height: 50px;
+    width: 200px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+button.btn:hover {
+    background-color: #11348f;
+}
+
+button.btn:active {
+    background-color: #0b2964;
+}
+
+button.btn:disabled {
+    background-color: black;
+
+}
+
 div.chain {
     vertical-align: middle;
     margin-top: 50px;

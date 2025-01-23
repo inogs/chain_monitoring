@@ -1,12 +1,13 @@
 from .phase import Phase
 
 class Chain:
-    def __init__(self, name, terminated, start_time, end_time, phases):
+    def __init__(self, name, terminated, start_time, end_time, phases, type):
         self.name = name
         self.terminated = terminated
         self.start_time = start_time
         self.end_time = end_time
         self.phases = phases
+        self.type = type
         
 
     def to_dict(self):
@@ -15,5 +16,6 @@ class Chain:
             'terminated': self.terminated,
             'start_time': self.start_time,
             'end_time': self.end_time,
-            'phases': [phase.to_dict() for phase in self.phases]
+            'phases': [phase.to_dict() for phase in self.phases],
+            'type': self.type
         }

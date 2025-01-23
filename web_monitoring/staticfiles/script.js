@@ -1,6 +1,7 @@
 var check = true;
 const today = new Date();
-var toUse = today;
+var toUse = new Date();
+toUse.setDate(today.getDate());
 
 window.onload = function () {
     drawChains();
@@ -44,18 +45,13 @@ function isFinished(phase) {
 function findInProgress(phases) {
 
     for (let i = phases.length - 1; i >= 0; i--) {
-        if (phases[i]['exists'] == true && phases[i]['terminated'] == true && i == phases.length - 1) {
-            return 'The chain has finished! Last phase complited: ' + phases[phases.length - 1 - i]['name'];
-        }
 
-        else if (phases[i]['exists'] == true && phases[i]['terminated'] == false && phases[i]['errors'] == '') {
-            let perc = 100 * (phases.length - i) / phases.length;
-            return 'The chain is running! Current phase: ' + phases[i]['name'] + ' (' + perc + '%)';
+        if (phases[i]['exists'] == true && phases[i]['terminated'] == false && phases[i]['errors'] == '') {
+            return 'The chain is running!';
         }
 
         else {
-            let perc = 100 * (phases.length - i) / phases.length;
-            return 'The chain has failed! The failed phase: ' + phases[i]['name'] + ' (' + perc + '%)';
+            return 'The chain has failed!';
         }
     }
 
@@ -111,14 +107,14 @@ async function drawChains() {
     prv_date = prv.getFullYear();
     var nxt = new Date();
     nxt.setDate(toUse.getDate() + 1);
-    console.log(nxt);
     nxt_date = nxt.getFullYear();
 
-    if(toUse == today) {
+
+    if(toUse.getDate() == today.getDate()) {
         document.getElementById('nxt').disabled= 'true';
     }
     else {
-        document.getElementById('nxt').disabled= 'false';
+        document.getElementById('nxt').disabled= '';
     }
 
     if ((toUse.getMonth() + 1) < 10) {
@@ -173,7 +169,6 @@ async function drawChains() {
 
     let url = '/data?date=' + date + '&prec=' + prv_date + '&next=' + nxt_date;
 
-    console.log(url);
 
     let res = await fetch(url).then((res) => {
         if (!res.ok) {
@@ -182,110 +177,121 @@ async function drawChains() {
         return res.json();
     }).catch((error) => console.error("Unable to fetch data from " + url + ":", error));
 
-    const chains = res['chains'];
+    const chains = res;
+    console.log(chains);
+    const types = ['analysis', 'forecast']
 
-    for (let i = chains.length - 1; i >= 0; i--) {
+    for(let k = 0; k < types.length; k++) {
+        if(types[k] in chains) {
+            for (let i = chains[types[k]].length - 1; i >= 0; i--) {
 
-        let to_center = document.createElement('div');
-        to_center.classList.add('toCenter');
-
-        let chain = document.createElement('div');
-        chain.classList.add('chain');
-
-        //--------------------- HEADER ---------------------
-
-        let header_chain = document.createElement('div');
-        header_chain.classList.add('headerChain');
-
-        let title_chain = document.createElement('h1');
-        title_chain.classList.add('titleChain');
-        title_chain.innerHTML = 'CHAIN: ' + chains[i]['name'];
-
-        let running_chain = document.createElement('h2');
-        running_chain.classList.add('runningChain');
-        running_chain.innerHTML = findInProgress(chains[i]['phases']);
-
-        //--------------------------------------------------
-
-        //--------------------- TIME -----------------------
-
-        let time_chain = document.createElement('div');
-        time_chain.classList.add('timeChain');
-        let time_content = document.createElement('h1');
-        time_content.classList.add('titleChain');
-        time_content.innerHTML = 'From: ' + chains[i]['start_time'].substring(9, 17) + ' To: ' + chains[i]['end_time'].substring(9, 17);
-
-
-        //--------------------------------------------------
-
-        //--------------------- PHASES ---------------------
-
-
-        let content_chain = document.createElement('div');
-        content_chain.classList.add('contentChain');
-
-        check = true;
-
-        for (let m = chains[i]['phases'].length - 1; m >= 0; m--) {
-
-            let progress_chain = document.createElement('div');
-            progress_chain.classList.add('progressChain');
-
-            let content_phase = document.createElement('h1');
-            content_phase.classList.add('phase');
-            if (chains[i]['name'] == '001' && chains.length > 1) {
-                progress_chain.classList.add(isFirstChain(chains[i], chains[i]['phases'][m]));
-                running_chain.innerHTML = 'The chain has failed! The failed phase: ' + chains[i]['phases'][m]['name'];
-                check = false;
-            }
-            else if(check) {
-                progress_chain.classList.add(isFinished(chains[i]['phases'][m]), check);
-            }
-            content_phase.innerHTML = chains[i]['phases'][m]['name'];
-
-            progress_chain.appendChild(content_phase);
-            content_chain.appendChild(progress_chain);
-            
-
+                let to_center = document.createElement('div');
+                to_center.classList.add('toCenter');
+        
+                let chain = document.createElement('div');
+                chain.classList.add('chain');
+        
+                //--------------------- HEADER ---------------------
+        
+                let header_chain = document.createElement('div');
+                header_chain.classList.add('headerChain');
+        
+                let title_chain = document.createElement('h1');
+                title_chain.classList.add('titleChain');
+                title_chain.innerHTML = 'CHAIN: ' + chains[types[k]][i]['name'] + ' ' + chains[types[k]][i]['type'];
+        
+                let running_chain = document.createElement('h2');
+                running_chain.classList.add('runningChain');
+                if(chains[types[k]][i]['terminated'] == true) {
+                    running_chain.innerHTML = 'The chain has finished!';
+                }
+                else {
+                    running_chain.innerHTML = findInProgress(chains[types[k]][i]['phases']);
+                }
+        
+                //--------------------------------------------------
+        
+                //--------------------- TIME -----------------------
+        
+                let time_chain = document.createElement('div');
+                time_chain.classList.add('timeChain');
+                let time_content = document.createElement('h1');
+                time_content.classList.add('titleChain');
+                time_content.innerHTML = 'From: ' + chains[types[k]][i]['start_time'].substring(9, 17) + ' To: ' + chains[types[k]][i]['end_time'].substring(9, 17);
+        
+        
+                //--------------------------------------------------
+        
+                //--------------------- PHASES ---------------------
+        
+        
+                let content_chain = document.createElement('div');
+                content_chain.classList.add('contentChain');
+        
+                check = true;
+        
+                for (let m = chains[types[k]][i]['phases'].length - 1; m >= 0; m--) {
+        
+                    let progress_chain = document.createElement('div');
+                    progress_chain.classList.add('progressChain');
+        
+                    let content_phase = document.createElement('h1');
+                    content_phase.classList.add('phase');
+                    if (i !=  chains[types[k]].length - 1 && chains.length > 1) {
+                        progress_chain.classList.add(isFirstChain(chains[types[k]][i], chains[types[k]][i]['phases'][m]));
+                        running_chain.innerHTML = 'The chain has failed!';
+                        check = false;
+                    }
+                    else if(check) {
+                        progress_chain.classList.add(isFinished(chains[types[k]][i]['phases'][m]), check);
+                    }
+                    content_phase.innerHTML = chains[types[k]][i]['phases'][m]['name'];
+        
+                    progress_chain.appendChild(content_phase);
+                    content_chain.appendChild(progress_chain);
+                    
+        
+                }
+        
+                //--------------------- FOOTER ---------------------
+        
+                let footer_chain = document.createElement('div');
+                footer_chain.classList.add('footerChain');
+        
+                let footer_content = document.createElement('p');
+                footer_content.classList.add('footerChain');
+                let text_errors = findErrors(chains[types[k]][i]['phases']);
+                if (text_errors != '') {
+                    footer_content.innerHTML = text_errors;
+                }
+                else {
+                    footer_content.innerHTML = "Currently there aren't any errors";
+                }
+        
+        
+                //--------------------------------------------------
+        
+                //--------------------- APPEND ---------------------
+        
+                header_chain.appendChild(title_chain);
+                header_chain.appendChild(running_chain);
+                chain.appendChild(header_chain);
+        
+                time_chain.appendChild(time_content);
+                chain.appendChild(time_chain);
+        
+                chain.appendChild(content_chain)
+        
+                footer_chain.appendChild(footer_content);
+                chain.appendChild(footer_chain);
+        
+                to_center.appendChild(chain);
+                div_content.appendChild(to_center);
+        
+            }   
         }
-
-        //--------------------- FOOTER ---------------------
-
-        let footer_chain = document.createElement('div');
-        footer_chain.classList.add('footerChain');
-
-        let footer_content = document.createElement('p');
-        footer_content.classList.add('footerChain');
-        let text_errors = findErrors(chains[i]['phases']);
-        if (text_errors != '') {
-            footer_content.innerHTML = text_errors;
-        }
-        else {
-            footer_content.innerHTML = "Currently there aren't any errors";
-        }
-
-
-        //--------------------------------------------------
-
-        //--------------------- APPEND ---------------------
-
-        header_chain.appendChild(title_chain);
-        header_chain.appendChild(running_chain);
-        chain.appendChild(header_chain);
-
-        time_chain.appendChild(time_content);
-        chain.appendChild(time_chain);
-
-        chain.appendChild(content_chain)
-
-        footer_chain.appendChild(footer_content);
-        chain.appendChild(footer_chain);
-
-        to_center.appendChild(chain);
-        div_content.appendChild(to_center);
-
+    
     }
-
     // if(toUse == today) {
     //     setInterval('drawChain()', 60000);
     // }
