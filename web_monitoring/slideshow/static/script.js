@@ -1,31 +1,24 @@
 var check = true;
 const today = new Date();
-
+var toUse = today;
 
 window.onload = function () {
-    var date = today.getFullYear();
-
-    if ((today.getMonth() + 1) < 10) {
-        date += '0' + (today.getMonth() + 1);
-    }
-    else {
-        date += (today.getMonth() + 1);
-    }
-
-    if (today.getDate() < 10) {
-        date += '0' + today.getDate();
-    }
-    else {
-        date += today.getDate();
-    }
-    drawChains(date);
+    drawChains();
 };
 
 function autoRefresh() {
     window.location = window.location.href;
 }
 
+function previousDay() {
+    toUse.setDate(toUse.getDate() - 1);
+    drawChains();
+}
 
+function nextDay() {
+    toUse.setDate(toUse.getDate() + 1);
+    drawChains();
+}
 
 function isFinished(phase) {
 
@@ -38,7 +31,7 @@ function isFinished(phase) {
     }
 
     else if (phase['exists'] == true && phase['terminated'] == false && phase['errors'] != '') {
-        check = false;
+        //check = false;
         return 'failed';
     }
 
@@ -68,6 +61,34 @@ function findInProgress(phases) {
 
 }
 
+function isFirstChain(chain, phase) {
+
+    var x = 0;
+
+    for (let i = 0; i < chain['phases'].length; i++) {
+        if((chain['phases'][i]['exists'] == true && chain['phases'][i]['terminated'] == true) || (chain['phases'][i]['terminated'] == false && chain['phases'][i]['exists'] == true)) {
+            x = i;
+            break;
+        }
+
+    }
+
+    if (phase['exists'] == true && phase['terminated'] == true && phase['name'] == chain['phases'][x]['name']) {
+        return 'failed';
+    }
+    else if (phase['exists'] == true && phase['terminated'] == true) {
+        return 'done';
+    }
+
+    else if (phase['exists'] == true && phase['terminated'] == false) {
+        return 'failed';
+    }
+
+    else {
+        return 'notStarted';
+    }
+}
+
 function findErrors(phases) {
 
     let to_return = "";
@@ -82,14 +103,77 @@ function findErrors(phases) {
 }
 
 
-async function drawChains(date) {
+async function drawChains() {
 
-    document.getElementById('date').innerHTML = "Watching today's chain status: " + today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
-    document.getElementById('footerOGS').innerHTML = "© OGS - " + today.getFullYear();
+    var date = toUse.getFullYear();
+    var prv = new Date();
+    prv.setDate(toUse.getDate() - 1);
+    prv_date = prv.getFullYear();
+    var nxt = new Date();
+    nxt.setDate(toUse.getDate() + 1);
+    console.log(nxt);
+    nxt_date = nxt.getFullYear();
+
+    if(toUse == today) {
+        document.getElementById('nxt').disabled= 'true';
+    }
+    else {
+        document.getElementById('nxt').disabled= 'false';
+    }
+
+    if ((toUse.getMonth() + 1) < 10) {
+        date += '0' + (toUse.getMonth() + 1);
+    }
+    else {
+        date += (toUse.getMonth() + 1);
+    }
+
+    if (toUse.getDate() < 10) {
+        date += '0' + toUse.getDate();
+    }
+    else {
+        date += toUse.getDate();
+    }
+
+
+    if ((prv.getMonth() + 1) < 10) {
+        prv_date += '0' + (prv.getMonth() + 1);
+    }
+    else {
+        prv_date += (prv.getMonth() + 1);
+    }
+
+    if (prv.getDate() < 10) {
+        prv_date += '0' + prv.getDate();
+    }
+    else {
+        prv_date += prv.getDate();
+    }
+
+    if ((nxt.getMonth() + 1) < 10) {
+        nxt_date += '0' + (nxt.getMonth() + 1);
+    }
+    else {
+        nxt_date += (nxt.getMonth() + 1);
+    }
+
+    if (nxt.getDate() < 10) {
+        nxt_date += '0' + nxt.getDate();
+    }
+    else {
+        nxt_date += nxt.getDate();
+    }
+    
+
+    document.getElementById('date').innerHTML = "Watching today's chain status: " + toUse.getDate() + '/' + (toUse.getMonth() + 1) + '/' + toUse.getFullYear();
+    document.getElementById('footerOGS').innerHTML = "© OGS - " + toUse.getFullYear();
 
     let div_content = document.getElementById('contentPage');
+    div_content.innerHTML = '';
 
-    let url = '/data?date=' + date;
+    let url = '/data?date=' + date + '&prec=' + prv_date + '&next=' + nxt_date;
+
+    console.log(url);
 
     let res = await fetch(url).then((res) => {
         if (!res.ok) {
@@ -100,7 +184,7 @@ async function drawChains(date) {
 
     const chains = res['chains'];
 
-    for (let i = 0; i < chains.length; i++) {
+    for (let i = chains.length - 1; i >= 0; i--) {
 
         let to_center = document.createElement('div');
         to_center.classList.add('toCenter');
@@ -149,15 +233,15 @@ async function drawChains(date) {
 
             let content_phase = document.createElement('h1');
             content_phase.classList.add('phase');
-            if (check && i == 0 && chains.length > 1) {
-                progress_chain.classList.add('failed');
-                running_chain.innerHTML = 'The chain has failed! The failed phase: ' + chains[i]['phases'][m]['name'] + ' (12.5%)';
+            if (chains[i]['name'] == '001' && chains.length > 1) {
+                progress_chain.classList.add(isFirstChain(chains[i], chains[i]['phases'][m]));
+                running_chain.innerHTML = 'The chain has failed! The failed phase: ' + chains[i]['phases'][m]['name'];
                 check = false;
             }
             else if(check) {
                 progress_chain.classList.add(isFinished(chains[i]['phases'][m]), check);
             }
-            content_phase.innerHTML = chains[0]['phases'][m]['name'];
+            content_phase.innerHTML = chains[i]['phases'][m]['name'];
 
             progress_chain.appendChild(content_phase);
             content_chain.appendChild(progress_chain);
@@ -202,7 +286,9 @@ async function drawChains(date) {
 
     }
 
-    setInterval('autoRefresh()', 60000);
+    // if(toUse == today) {
+    //     setInterval('drawChain()', 60000);
+    // }
 
 }
 

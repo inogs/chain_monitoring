@@ -12,13 +12,17 @@ import json
 
 def main(request):
 
-    #today = request.GET['date']
+    day = request.GET['date']
+    prv = request.GET['prec']
+    nxt = request.GET['next']
 
     #DATADIR = Path('C:\\Users\\Lorenzo\\Documents\\chain_monitoring\\monitoring\\forecast\\' + today)
 
-    DATADIR = Path('C:\\Users\\Lorenzo\\Documents\\chain_monitoring\\monitoring\\forecast\\20250108')
+    #DATADIR = Path('C:\\Users\\Lorenzo\\Documents\\chain_monitoring\\monitoring\\forecast\\20250108')
+
+    DATADIR = Path('D:\\chain_logs\\forecast\\' + day)
     
-    names, start_times, end_times, phases, term_chains = get_data(DATADIR) 
+    names, start_times, end_times, phases, term_chains = get_data(DATADIR, prv, nxt) 
     
     chains = []
 
@@ -38,6 +42,7 @@ def main(request):
         chain = Chain(names[i], term_chains[i], start_times[i], end_times[i], phases_for_chain)
         chains.append(chain)
 
+    
     #trasforma in json l'output del metodo 'to_dict' in Catena per ogni oggetto catena, spazi settati a 4
     json_text = [chain.to_dict() for chain in chains]
     return JsonResponse( {
