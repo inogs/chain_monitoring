@@ -84,9 +84,8 @@ function findErrors(phases) {
 
 async function drawChains(date) {
 
-    document.getElementById('date').innerHTML = "Watching today's chain status: " + date;
-
-    //console.log(date);
+    document.getElementById('date').innerHTML = "Watching today's chain status: " + today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+    document.getElementById('footerOGS').innerHTML = "© OGS - " + today.getFullYear();
 
     let div_content = document.getElementById('contentPage');
 
@@ -203,13 +202,7 @@ async function drawChains(date) {
 
     }
 
-    // for(let m = chains[0]['phases'].length - 1; m >= 0; m--) {
-
-    //     console.log(chains[0]['phases'][m]['name']);
-
-    // }
-
-    //setInterval('autoRefresh()', 60000);
+    setInterval('autoRefresh()', 60000);
 
 }
 
