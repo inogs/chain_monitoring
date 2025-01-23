@@ -8,9 +8,15 @@ from .openFolders import get_data
 from pathlib import Path
 import json
 
-DATADIR = Path('C:\\Users\\Lorenzo\\Documents\\chain_monitoring\\monitoring\\forecast\\20250108')
+
 
 def main(request):
+
+    #today = request.GET['date']
+
+    #DATADIR = Path('C:\\Users\\Lorenzo\\Documents\\chain_monitoring\\monitoring\\forecast\\' + today)
+
+    DATADIR = Path('C:\\Users\\Lorenzo\\Documents\\chain_monitoring\\monitoring\\forecast\\20250108')
     
     names, start_times, end_times, phases, term_chains = get_data(DATADIR) 
     
