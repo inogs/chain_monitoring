@@ -1,12 +1,15 @@
 from pathlib import Path
+import re
 
-def get_data(folder_path, prv, nxt):
+def get_data(folder_path):
 
     names = get_names(folder_path)
     
-    start_times = get_starting_date(folder_path, names, prv, nxt)
-    end_times = get_endindg_times(folder_path, names, prv, nxt)
-    phases, terminated, term_chains  = get_phases(folder_path, names, prv, nxt)
+    data_re = re.compile('(PrEx )?(?P<date>[0-9]{8})-(?P<time>[0-9]{2}:[0-9]{2}:[0-9]{2})')
+
+    start_times = get_starting_date(folder_path, names, data_re)
+    end_times = get_endindg_times(folder_path, names, data_re)
+    phases, terminated, term_chains  = get_phases(folder_path, names, data_re)
 
     #print(terminated)
 
@@ -29,7 +32,15 @@ def get_data(folder_path, prv, nxt):
 
     return names, start_times, end_times, phases, term_chains
 
-def get_starting_date(folder_path, names, prv, nxt):
+def getYearMonthDay(toAdd):
+
+    year = toAdd[0:4]
+    month = toAdd[4:6]
+    day = toAdd[6:8]
+
+    return str(day) + '/' + str(month) + '/' + str(year)
+
+def get_starting_date(folder_path, names, reg):
 
     start_time = []
     
@@ -42,19 +53,14 @@ def get_starting_date(folder_path, names, prv, nxt):
 
         #print(file.readline())
             if len(txt) != 0:
+                checkDate = False
                 for line in txt:
-                    if (folder_path.name + '-') in line:
-                        start_time.append(line[line.find(folder_path.name + '-'):(line.find(folder_path.name + '-') + 17)])
+                    if reg.match(line):
+                        start_time.append(getYearMonthDay(reg.match(line).group('date')) + '-' + reg.match(line).group('time'))
+                        checkDate = True
                         break
-                    elif (prv + '-') in line:
-                        start_time.append(line[line.find(prv + '-'):(line.find(prv + '-') + 17)])
-                        break
-                    elif (nxt + '-') in line:
-                        start_time.append(line[line.find(nxt + '-'):(line.find(nxt + '-') + 17)])
-                        break
-                    else:
-                        start_time.append("It wasn't possible to find the specified item")
-                        break
+                if checkDate is False:
+                       start_time.append("It wasn't possible to find the specified item")
             else:   
                 start_time.append('None')
         else:
@@ -64,7 +70,7 @@ def get_starting_date(folder_path, names, prv, nxt):
 
     return start_time
 
-def get_endindg_times(folder_path, names, prv, nxt):
+def get_endindg_times(folder_path, names, reg):
 
     end_time_chain = []
     phases = ['get', 'A1', 'B1', 'B2', 'C1', 'C2', 'C3', 'C4']
@@ -88,19 +94,15 @@ def get_endindg_times(folder_path, names, prv, nxt):
                         break
 
             if checked is True:
+                check_date = False
                 for line in reversed(txt):
-                    if (folder_path.name + '-') in line:
-                        end_time_chain.append(line[line.find(folder_path.name + '-'):(line.find(folder_path.name + '-') + 17)])
+                    if reg.match(line):
+                        end_time_chain.append(getYearMonthDay(reg.match(line).group('date')) + '-' + reg.match(line).group('time'))
+                        check_date = True
                         break
-                    elif (prv + '-') in line:
-                        end_time_chain.append(line[line.find(prv + '-'):(line.find(prv + '-') + 17)])
-                        break
-                    elif (nxt + '-') in line:
-                        end_time_chain.append(line[line.find(nxt + '-'):(line.find(nxt + '-') + 17)])
-                        break
-                    else:
-                        end_time_chain.append("It wasn't possible to find the specified item")
-                        break
+                if check_date is False:
+                    end_time_chain.append("It wasn't possible to find the specified item")
+
                 break
 
             if checked is False and i == 0:
@@ -111,19 +113,15 @@ def get_endindg_times(folder_path, names, prv, nxt):
                     txt = file.readlines()
             # end_time_chain.append(txt[-4][5:22]) 
                     if len(txt) != 0:
+                        check_date_two = False
                         for line in reversed(txt):
-                            if (folder_path.name + '-') in line:
-                                end_time_chain.append(line[line.find(folder_path.name + '-'):(line.find(folder_path.name + '-') + 17)])
+                            if reg.match(line):
+                                end_time_chain.append(getYearMonthDay(reg.match(line).group('date')) + '-' + reg.match(line).group('time'))
+                                check_date_two = True
                                 break
-                            elif (prv + '-') in line:
-                                end_time_chain.append(line[line.find(prv + '-'):(line.find(prv + '-') + 17)])
-                                break
-                            elif (nxt + '-') in line:
-                                end_time_chain.append(line[line.find(nxt + '-'):(line.find(nxt + '-') + 17)])
-                                break
-                            else:
-                                end_time_chain.append("It wasn't possible to find the specified item")
-                                break
+                        if check_date_two is False:
+                            end_time_chain.append("It wasn't possible to find the specified item")
+                                
                         break
                     else:
                         end_time_chain.append('None')
@@ -134,7 +132,7 @@ def get_endindg_times(folder_path, names, prv, nxt):
         #print(file.readline())
     return end_time_chain
 
-def get_phases(folder_path, names, prv, nxt):
+def get_phases(folder_path, names, reg):
 
     output_phases = []
     term_phases = []
@@ -164,39 +162,27 @@ def get_phases(folder_path, names, prv, nxt):
                     if len(txt) != 0:
                         #phase.append(txt[1][5:22])
                         #print(str(n_phases[i])+ ' ' + str(folder_path.name) + ' lunghezza passata')
+                        check_date = False
                         for line in txt:
-                            if (folder_path.name + '-') in line:
+                            if reg.match(line):
                                 #print(str(n_phases[i])+ ' ' + str(folder_path.name) + ' lunghezza passata' + 'trovato inizio')
-                                phase.append(line[line.find(folder_path.name + '-'):(line.find(folder_path.name + '-') + 17)])
+                                phase.append(getYearMonthDay(reg.match(line).group('date')) + '-' + reg.match(line).group('time'))
+                                check_date = True
                                 break
 
-                            elif (prv + '-') in line:
-                                phase.append(line[line.find(prv + '-'):(line.find(prv + '-') + 17)])
-                                break
+                        if check_date is False:
+                            phase.append("It wasn't possible to find the specified item")
 
-                            elif (nxt + '-') in line:
-                                phase.append(line[line.find(nxt + '-'):(line.find(nxt + '-') + 17)])
-                                break
-                            else:
-                                phase.append("It wasn't possible to find the specified item")
-                                break
-
+                        check_date_two = False
                         for line in reversed(txt):
-                            if (folder_path.name + '-') in line:
-                                #print(str(n_phases[i])+ ' ' + str(folder_path.name) + ' lunghezza passata' + 'trovato fine')
-                                phase.append(line[line.find(folder_path.name + '-'):(line.find(folder_path.name + '-') + 17)])
+                            if reg.match(line):
+                                #print(str(n_phases[i])+ ' ' + str(folder_path.name) + ' lunghezza passata' + 'trovato inizio')
+                                phase.append(getYearMonthDay(reg.match(line).group('date')) + '-' + reg.match(line).group('time'))
+                                check_date_two = True
                                 break
 
-                            elif (prv + '-') in line:
-                                phase.append(line[line.find(prv + '-'):(line.find(prv + '-') + 17)])
-                                break
-
-                            elif (nxt + '-') in line:
-                                phase.append(line[line.find(nxt + '-'):(line.find(nxt + '-') + 17)])
-                                break
-                            else:
-                                phase.append("It wasn't possible to find the specified item")
-                                break
+                        if check_date_two is False:
+                            phase.append("It wasn't possible to find the specified item")
 
                         #phase.append(txt[-1][0:17])
                     else:

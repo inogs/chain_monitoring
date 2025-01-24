@@ -13,8 +13,6 @@ import json
 def main(request):
 
     day = request.GET['date']
-    prv = request.GET['prec']
-    nxt = request.GET['next']
 
     #DATADIR = Path('C:\\Users\\Lorenzo\\Documents\\chain_monitoring\\monitoring\\forecast\\' + today)
 
@@ -27,7 +25,7 @@ def main(request):
     result = []
     chains = []
     
-    names, start_times, end_times, phases, term_chains = get_data(DATADIR, prv, nxt) 
+    names, start_times, end_times, phases, term_chains = get_data(DATADIR) 
 
     for i in range(len(names)):
 
@@ -54,7 +52,7 @@ def main(request):
     if(ANALYSIS / day).exists():
         chainsAnalysis = []
         ANALYSISDIR = ANALYSIS / day
-        names, start_times, end_times, phases, term_chains = get_data(ANALYSISDIR, prv, nxt) 
+        names, start_times, end_times, phases, term_chains = get_data(ANALYSISDIR) 
 
 
         for i in range(len(names)):

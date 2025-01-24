@@ -104,14 +104,6 @@ async function drawChains() {
 
     var date = toUse.getFullYear();
 
-    var prv = new Date();
-    prv.setDate(toUse.getDate() - 1);
-    var prv_date = prv.getFullYear();
-
-    var nxt = new Date();
-    nxt.setDate(toUse.getDate() + 1);
-    var nxt_date = nxt.getFullYear();
-
 
     if (toUse.getDate() == today.getDate()) {
         document.getElementById('nxt').disabled = 'true';
@@ -134,48 +126,15 @@ async function drawChains() {
         date += '' + toUse.getDate();
     }
 
-    //---------------------------------------
+    //--------------------------------------
 
-    if ((prv.getMonth() + 1) < 10) {
-        prv_date += '0' + (prv.getMonth() + 1);
-    }
-    else {
-        prv_date += '' + (prv.getMonth() + 1);
-    }
+    document.getElementById('date').innerHTML = "Watching: " + toUse.getDate() + '/' + (toUse.getMonth() + 1) + '/' + toUse.getFullYear();
+    document.getElementById('footerOGS').innerHTML = "© OGS - " + today.getFullYear();
 
-    if (prv.getDate() < 10) {
-        prv_date += '0' + prv.getDate();
-    }
-    else {
-        prv_date += '' + prv.getDate();
-    }
-
-    //---------------------------------------
-
-    if ((nxt.getMonth() + 1) < 10) {
-        nxt_date += '0' + (nxt.getMonth() + 1);
-    }
-    else {
-        nxt_date += '' + (nxt.getMonth() + 1);
-    }
-
-    if (nxt.getDate() < 10) {
-        nxt_date += '0' + nxt.getDate();
-    }
-    else {
-        nxt_date += '' + nxt.getDate();
-    }
-
-
-    document.getElementById('date').innerHTML = "Watching today's chain status: " + toUse.getDate() + '/' + (toUse.getMonth() + 1) + '/' + toUse.getFullYear();
-    document.getElementById('footerOGS').innerHTML = "© OGS - " + toUse.getFullYear();
-    document.getElementById('footerOGS').appendChild(document.createElement('br'));
-    document.getElementById('footerOGS').innerHTML += "*Note: if in dates appears 'It wasn't possible to get the time', it means that the chain worked before the previous day, or after the next day or both.";
-    ;
     let div_content = document.getElementById('contentPage');
     div_content.innerHTML = '';
 
-    let url = '/data?date=' + date + '&prec=' + prv_date + '&next=' + nxt_date;
+    let url = '/data?date=' + date;
 
 
     let res = await fetch(url).then((res) => {
@@ -225,19 +184,9 @@ async function drawChains() {
                 let time_content = document.createElement('h1');
                 time_content.classList.add('titleChain');
                 var toAdd = "From: ";
-                if (chains[types[k]][i]['start_time'].includes("It wasn't")) {
-                    toAdd += chains[types[k]][i]['start_time'];
-                }
-                else {
-                    toAdd += chains[types[k]][i]['start_time'].substring(9, 17);
-                }
+                toAdd += chains[types[k]][i]['start_time'];
                 toAdd += ' To: ';
-                if (chains[types[k]][i]['end_time'].includes("It wasn't")) {
-                    toAdd += chains[types[k]][i]['end_time'];
-                }
-                else {
-                    toAdd += chains[types[k]][i]['end_time'].substring(9, 17);
-                }
+                toAdd += chains[types[k]][i]['end_time'];
                 time_content.innerHTML = toAdd;
 
 
