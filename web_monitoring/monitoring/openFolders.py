@@ -22,10 +22,10 @@ def get_data(folder_path, prv, nxt):
         
         phases[i].append(terminated[chain_num][pos])
         #print(terminated[chain_num][pos])
-        print(phases[i])
+        #print(phases[i])
         
 
-        
+    #print(end_times)   
 
     return names, start_times, end_times, phases, term_chains
 
@@ -53,7 +53,7 @@ def get_starting_date(folder_path, names, prv, nxt):
                         start_time.append(line[line.find(nxt + '-'):(line.find(nxt + '-') + 17)])
                         break
                     else:
-                        start_time.append("It wasn't " + folder_path.name + ' or ' + prv + ' or ' + nxt)
+                        start_time.append("It wasn't possible to find the specified item")
                         break
             else:   
                 start_time.append('None')
@@ -67,11 +67,11 @@ def get_starting_date(folder_path, names, prv, nxt):
 def get_endindg_times(folder_path, names, prv, nxt):
 
     end_time_chain = []
-    phases = ['A1', 'B1', 'B2', 'C1', 'C2', 'C3', 'C4']
+    phases = ['get', 'A1', 'B1', 'B2', 'C1', 'C2', 'C3', 'C4']
 
     for name in names:
 
-        for i in reversed(range(7)):
+        for i in reversed(range(len(phases))):
 
             checked = False
             file = None
@@ -99,11 +99,11 @@ def get_endindg_times(folder_path, names, prv, nxt):
                         end_time_chain.append(line[line.find(nxt + '-'):(line.find(nxt + '-') + 17)])
                         break
                     else:
-                        end_time_chain.append("It wasn't " + folder_path.name + ' or ' + prv + ' or ' + nxt)
+                        end_time_chain.append("It wasn't possible to find the specified item")
                         break
                 break
 
-            if checked is False:
+            if checked is False and i == 0:
                 file_name = 'opa.g100.' + name + '.opa_preproc.out'
                 if (folder_path / file_name).exists():
 
@@ -122,10 +122,12 @@ def get_endindg_times(folder_path, names, prv, nxt):
                                 end_time_chain.append(line[line.find(nxt + '-'):(line.find(nxt + '-') + 17)])
                                 break
                             else:
-                                end_time_chain.append("It wasn't " + folder_path.name + ' or ' + prv + ' or ' + nxt)
+                                end_time_chain.append("It wasn't possible to find the specified item")
                                 break
+                        break
                     else:
                         end_time_chain.append('None')
+                        break
                 else:
                     end_time_chain.append('None')
                     break
@@ -155,16 +157,16 @@ def get_phases(folder_path, names, prv, nxt):
                     exist = True
                     file = open(list(folder_path.iterdir())[j], 'r')
                     txt = file.readlines()
-                    print(str(n_phases[i])+ ' ' + str(folder_path.name))
+                    #print(str(n_phases[i])+ ' ' + str(folder_path.name))
                     phase.append(name)
                     phase.append(n_phases[i])
                     phase.append(exist)
                     if len(txt) != 0:
                         #phase.append(txt[1][5:22])
-                        print(str(n_phases[i])+ ' ' + str(folder_path.name) + ' lunghezza passata')
+                        #print(str(n_phases[i])+ ' ' + str(folder_path.name) + ' lunghezza passata')
                         for line in txt:
                             if (folder_path.name + '-') in line:
-                                print(str(n_phases[i])+ ' ' + str(folder_path.name) + ' lunghezza passata' + 'trovato inizio')
+                                #print(str(n_phases[i])+ ' ' + str(folder_path.name) + ' lunghezza passata' + 'trovato inizio')
                                 phase.append(line[line.find(folder_path.name + '-'):(line.find(folder_path.name + '-') + 17)])
                                 break
 
@@ -176,12 +178,12 @@ def get_phases(folder_path, names, prv, nxt):
                                 phase.append(line[line.find(nxt + '-'):(line.find(nxt + '-') + 17)])
                                 break
                             else:
-                                phase.append("It wasn't " + folder_path.name + ' or ' + prv + ' or ' + nxt)
+                                phase.append("It wasn't possible to find the specified item")
                                 break
 
                         for line in reversed(txt):
                             if (folder_path.name + '-') in line:
-                                print(str(n_phases[i])+ ' ' + str(folder_path.name) + ' lunghezza passata' + 'trovato fine')
+                                #print(str(n_phases[i])+ ' ' + str(folder_path.name) + ' lunghezza passata' + 'trovato fine')
                                 phase.append(line[line.find(folder_path.name + '-'):(line.find(folder_path.name + '-') + 17)])
                                 break
 
@@ -193,7 +195,7 @@ def get_phases(folder_path, names, prv, nxt):
                                 phase.append(line[line.find(nxt + '-'):(line.find(nxt + '-') + 17)])
                                 break
                             else:
-                                phase.append("It wasn't " + folder_path.name + ' or ' + prv + ' or ' + nxt)
+                                phase.append("It wasn't possible to find the specified item")
                                 break
 
                         #phase.append(txt[-1][0:17])
@@ -408,13 +410,13 @@ def get_names(folder_path):
 
             if key in list(folder_path.iterdir())[j].name:
                 check = True
-                break;
+                break
 
         if check is True:
             #print(key)
             chain.append(key)
         else:
-            break;
+            break
         
         
     

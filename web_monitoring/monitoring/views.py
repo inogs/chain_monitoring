@@ -20,9 +20,9 @@ def main(request):
 
     #DATADIR = Path('C:\\Users\\Lorenzo\\Documents\\chain_monitoring\\monitoring\\forecast\\20250108')
 
-    ANALYSIS = Path('D:\\chain_logs\\analysis') 
+    ANALYSIS = Path('C:\\Users\\Lorenzo\\Documents\\chain_logs\\analysis') 
 
-    DATADIR = Path('D:\\chain_logs\\forecast\\' + day)
+    DATADIR = Path('C:\\Users\\Lorenzo\\Documents\\chain_logs\\forecast\\' + day)
 
     result = []
     chains = []
