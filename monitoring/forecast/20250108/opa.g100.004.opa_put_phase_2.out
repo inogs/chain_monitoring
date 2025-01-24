@@ -1,685 +1,0 @@
-START
-PrEx 20250108-20:39:07    > . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh
-PrEx 20250108-20:39:07   0< . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh [ok]
-PrEx 20250108-20:39:07    > module load autoload
-PrEx 20250108-20:39:07   0< module load autoload [ok]
-PrEx 20250108-20:39:07    > module load intelmpi/oneapi-2021--binary
-PrEx 20250108-20:39:07   0< module load intelmpi/oneapi-2021--binary [ok]
-PrEx 20250108-20:39:07    > module load mkl/oneapi-2021--binary
-PrEx 20250108-20:39:07   0< module load mkl/oneapi-2021--binary [ok]
-PrEx 20250108-20:39:07    > module load nco
-PrEx 20250108-20:39:07   0< module load nco [ok]
-PrEx 20250108-20:39:07    > module load python/3.11.7--gcc--10.2.0
-PrEx 20250108-20:39:07   0< module load python/3.11.7--gcc--10.2.0 [ok]
-PrEx 20250108-20:39:07    > ulimit -s unlimited
-PrEx 20250108-20:39:07   0< ulimit -s unlimited [ok]
-PrEx 20250108-20:39:07    > source /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/venv/bin/activate
-PrEx 20250108-20:39:07   0< source /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/venv/bin/activate [ok]
-PrEx 20250108-20:39:07    > opa_set_default_run 
-PrEx 20250108-20:39:07   0< opa_set_default_run  [ok]
-PrEx 20250108-20:39:07    > opa_set_run
-### OPA_RUNDATE ...................... '20250108'
-### OPA_WEEKDAY ...................... '3'
-### OPA_TODAY ........................ ''
-### OPA_DEFAULT_RUNDATE .............. '20250108'
-### OPA_PRODDATE ..................... '20250108'
-### OPA_RESTART_RUNDATE .............. '20250107'
-### OPA_RESTART_WEEKDAY .............. '2'
-PrEx 20250108-20:39:07   0< opa_set_run [ok]
-20250108-20:39:07 00 (004) : * START(opa_put_phase_2.ksh)
-_NO_DNT ................ false
-_DRY_RUN ............... false
-_MAX_TRIES ............. 10
-Processing file no. 1: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--NUTR-MedBFM4-MED-b20250108_sm-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250107 -t NUTR
-20250107_d-OGS--NUTR-MedBFM4-MED-b20250108_sm-sv09.00.nc has to be sent
- and 20250107_d-OGS--NUTR-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:39:34    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--NUTR-MedBFM4-MED-b20250108_sm-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250107_d-OGS--NUTR-MedBFM4-MED-b20250108_sm-sv09.00.nc:...-MED-b20250108_sm-sv09.00.nc: ETA: 0:00 0.31/121.03 MB 2.56 GB/s ...-MED-b20250108_sm-sv09.00.nc: ETA: 0:00 86.23/121.03 MB 97.69 MB/s ...-MED-b20250108_sm-sv09.00.nc: ETA: 0:00 118.67/121.03 MB 93.76 MB/s ...7_d-OGS--NUTR-MedBFM4-MED-b20250108_sm-sv09.00.nc: 121.03 MB 93.76 MB/s ...7_d-OGS--NUTR-MedBFM4-MED-b20250108_sm-sv09.00.nc: 121.03 MB 93.76 MB/s
-PrEx 20250108-20:39:36   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--NUTR-MedBFM4-MED-b20250108_sm-sv09.00.nc 2>&1 [ok]
-Processing file no. 2: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250108 -t NUTR
-20250108_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250108_d-OGS--NUTR-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:39:43    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250108_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/120.97 MB 2.65 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:12 2.63/120.97 MB 10.28 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 95.66/120.97 MB 78.42 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 117.53/120.97 MB 71.69 MB/s ...8_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.97 MB 71.69 MB/s ...8_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.97 MB 71.69 MB/s
-PrEx 20250108-20:39:45   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 3: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250109 -t NUTR
-20250109_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250109_d-OGS--NUTR-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:39:52    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250109_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/120.90 MB 2.77 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:03 10.79/120.90 MB 41.67 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 104.87/120.90 MB 82.88 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 115.44/120.90 MB 71.86 MB/s ...9_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.90 MB 71.86 MB/s ...9_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.90 MB 71.86 MB/s
-PrEx 20250108-20:39:54   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 4: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250110 -t NUTR
-20250110_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250110_d-OGS--NUTR-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:40:01    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250110_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/120.85 MB 2.23 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:03 9.64/120.85 MB 32.71 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 119.56/120.85 MB 103.65 MB/s ...0_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.85 MB 103.65 MB/s ...0_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.85 MB 103.65 MB/s
-PrEx 20250108-20:40:03   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 5: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250111 -t NUTR
-20250111_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250111_d-OGS--NUTR-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:40:09    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250111_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.29/120.81 MB 2.65 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 46.79/120.81 MB 60.67 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 116.52/120.81 MB 64.60 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 116.52/120.81 MB 58.32 MB/s ...1_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.81 MB 58.32 MB/s ...1_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.81 MB 58.32 MB/s
-PrEx 20250108-20:40:12   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 6: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250112 -t NUTR
-20250112_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250112_d-OGS--NUTR-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:40:18    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250112_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/120.78 MB 2.82 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 32.36/120.78 MB 73.15 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 117.99/120.78 MB 91.94 MB/s ...2_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.78 MB 91.94 MB/s ...2_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.78 MB 91.94 MB/s
-PrEx 20250108-20:40:21   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 7: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250113 -t NUTR
-20250113_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250113_d-OGS--NUTR-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:40:27    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250113_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/120.79 MB 2.14 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:02 26.93/120.79 MB 46.88 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 104.23/120.79 MB 66.96 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 120.20/120.79 MB 61.26 MB/s ...3_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.79 MB 61.26 MB/s ...3_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.79 MB 61.26 MB/s
-PrEx 20250108-20:40:30   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 8: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250114 -t NUTR
-20250114_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250114_d-OGS--NUTR-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:40:37    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250114_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/120.80 MB 1.92 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:06 4.68/120.80 MB 19.82 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 116.97/120.80 MB 90.01 MB/s ...4_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.80 MB 90.01 MB/s ...4_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.80 MB 90.01 MB/s
-PrEx 20250108-20:40:39   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 9: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250115 -t NUTR
-20250115_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250115_d-OGS--NUTR-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:40:45    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250115_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/120.77 MB 2.65 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 27.64/120.77 MB 68.96 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 116.81/120.77 MB 116.08 MB/s ...5_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.77 MB 116.08 MB/s ...5_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.77 MB 116.08 MB/s
-PrEx 20250108-20:40:48   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 10: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250116 -t NUTR
-20250116_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250116_d-OGS--NUTR-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:40:54    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250116_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/120.71 MB 2.96 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:11 1.96/120.71 MB 10.47 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 106.11/120.71 MB 92.69 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 116.80/120.71 MB 82.91 MB/s ...6_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.71 MB 82.91 MB/s ...6_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.71 MB 82.91 MB/s
-PrEx 20250108-20:40:56   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 11: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250117 -t NUTR
-20250117_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
-PrEx 20250108-20:41:03    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250117_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/120.71 MB 2.63 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:08 2.83/120.71 MB 15.46 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 113.50/120.71 MB 94.86 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 118.91/120.71 MB 85.41 MB/s ...7_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.71 MB 85.41 MB/s ...7_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc: 120.71 MB 85.41 MB/s
-PrEx 20250108-20:41:05   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-nut_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--NUTR-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-PrEx 20250108-20:41:05    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/DNT /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T193907Z.xml
-.../POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T193907Z.xml:...006_014_20250108T193907Z.xml:   ETA:   0:00    4.06/  4.06 kB   14.98 MB/s  ...006_014_20250108T193907Z.xml:   ETA:   0:00    4.06/  4.06 kB  100.41 kB/s  ...ANALYSISFORECAST_BGC_006_014_20250108T193907Z.xml:    4.06 kB  100.41 kB/s  
-...ANALYSISFORECAST_BGC_006_014_20250108T193907Z.xml:    4.06 kB  100.41 kB/s  
-PrEx 20250108-20:41:06   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/DNT /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T193907Z.xml [ok]
-20250108-20:41:06 00 (004) : pro upload on ftp server completed successfully
-2025/01/08:20:41:06 , event_time_record , 20250108 , bio_transfer-tl-output_delivery_done
-20250108-20:41:06 00 (004) : * EXIT(opa_put_phase_2.ksh) [Ok]
-PrEx 20250108-20:41:06    > . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh
-PrEx 20250108-20:41:06   0< . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh [ok]
-PrEx 20250108-20:41:06    > module load autoload
-PrEx 20250108-20:41:06   0< module load autoload [ok]
-PrEx 20250108-20:41:06    > module load intelmpi/oneapi-2021--binary
-PrEx 20250108-20:41:06   0< module load intelmpi/oneapi-2021--binary [ok]
-PrEx 20250108-20:41:06    > module load mkl/oneapi-2021--binary
-PrEx 20250108-20:41:06   0< module load mkl/oneapi-2021--binary [ok]
-PrEx 20250108-20:41:06    > module load nco
-PrEx 20250108-20:41:06   0< module load nco [ok]
-PrEx 20250108-20:41:06    > module load python/3.11.7--gcc--10.2.0
-PrEx 20250108-20:41:06   0< module load python/3.11.7--gcc--10.2.0 [ok]
-PrEx 20250108-20:41:06    > ulimit -s unlimited
-PrEx 20250108-20:41:06   0< ulimit -s unlimited [ok]
-PrEx 20250108-20:41:06    > source /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/venv/bin/activate
-PrEx 20250108-20:41:06   0< source /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/venv/bin/activate [ok]
-PrEx 20250108-20:41:06    > opa_set_default_run 
-PrEx 20250108-20:41:06   0< opa_set_default_run  [ok]
-PrEx 20250108-20:41:06    > opa_set_run
-### OPA_RUNDATE ...................... '20250108'
-### OPA_WEEKDAY ...................... '3'
-### OPA_TODAY ........................ ''
-### OPA_DEFAULT_RUNDATE .............. '20250108'
-### OPA_PRODDATE ..................... '20250108'
-### OPA_RESTART_RUNDATE .............. '20250107'
-### OPA_RESTART_WEEKDAY .............. '2'
-PrEx 20250108-20:41:06   0< opa_set_run [ok]
-20250108-20:41:06 00 (004) : * START(opa_put_phase_2.ksh)
-_NO_DNT ................ false
-_DRY_RUN ............... false
-_MAX_TRIES ............. 10
-Processing file no. 1: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--BIOL-MedBFM4-MED-b20250108_sm-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250107 -t BIOL
-20250107_d-OGS--BIOL-MedBFM4-MED-b20250108_sm-sv09.00.nc has to be sent
- and 20250107_d-OGS--BIOL-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:41:15    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--BIOL-MedBFM4-MED-b20250108_sm-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250107_d-OGS--BIOL-MedBFM4-MED-b20250108_sm-sv09.00.nc:...-MED-b20250108_sm-sv09.00.nc: ETA: 0:00 0.31/ 60.46 MB 2.63 GB/s ...-MED-b20250108_sm-sv09.00.nc: ETA: 0:04 3.00/ 60.46 MB 14.03 MB/s ...-MED-b20250108_sm-sv09.00.nc: ETA: 0:00 56.56/ 60.46 MB 72.40 MB/s ...7_d-OGS--BIOL-MedBFM4-MED-b20250108_sm-sv09.00.nc: 60.46 MB 72.40 MB/s ...7_d-OGS--BIOL-MedBFM4-MED-b20250108_sm-sv09.00.nc: 60.46 MB 72.40 MB/s
-PrEx 20250108-20:41:16   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--BIOL-MedBFM4-MED-b20250108_sm-sv09.00.nc 2>&1 [ok]
-Processing file no. 2: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250108 -t BIOL
-20250108_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250108_d-OGS--BIOL-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:41:25    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250108_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.29/ 60.43 MB 2.58 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 20.82/ 60.43 MB 58.25 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 56.80/ 60.43 MB 67.63 MB/s ...8_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.43 MB 67.63 MB/s ...8_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.43 MB 67.63 MB/s
-PrEx 20250108-20:41:26   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 3: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250109 -t BIOL
-20250109_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250109_d-OGS--BIOL-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:41:35    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250109_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 60.41 MB 2.54 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 22.08/ 60.41 MB 50.27 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 57.50/ 60.41 MB 64.19 MB/s ...9_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.41 MB 64.19 MB/s ...9_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.41 MB 64.19 MB/s
-PrEx 20250108-20:41:36   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 4: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250110 -t BIOL
-20250110_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250110_d-OGS--BIOL-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:41:44    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250110_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 60.38 MB 2.75 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 26.13/ 60.38 MB 52.97 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 59.00/ 60.38 MB 66.21 MB/s ...0_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.38 MB 66.21 MB/s ...0_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.38 MB 66.21 MB/s
-PrEx 20250108-20:41:46   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 5: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250111 -t BIOL
-20250111_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250111_d-OGS--BIOL-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:41:54    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250111_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 60.37 MB 2.63 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 40.61/ 60.37 MB 64.78 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 56.52/ 60.37 MB 52.18 MB/s ...1_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.37 MB 52.18 MB/s ...1_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.37 MB 52.18 MB/s
-PrEx 20250108-20:41:56   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 6: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250112 -t BIOL
-20250112_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250112_d-OGS--BIOL-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:42:05    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250112_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 60.37 MB 2.72 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 22.11/ 60.37 MB 52.95 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 57.35/ 60.37 MB 66.99 MB/s ...2_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.37 MB 66.99 MB/s ...2_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.37 MB 66.99 MB/s
-PrEx 20250108-20:42:06   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 7: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250113 -t BIOL
-20250113_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250113_d-OGS--BIOL-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:42:14    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250113_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 60.37 MB 2.58 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 41.17/ 60.37 MB 73.55 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 57.27/ 60.37 MB 66.38 MB/s ...3_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.37 MB 66.38 MB/s ...3_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.37 MB 66.38 MB/s
-PrEx 20250108-20:42:17   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 8: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250114 -t BIOL
-20250114_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250114_d-OGS--BIOL-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:42:25    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250114_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.29/ 60.40 MB 2.62 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:02 5.18/ 60.40 MB 23.76 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 59.61/ 60.40 MB 47.79 MB/s ...4_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.40 MB 47.79 MB/s ...4_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.40 MB 47.79 MB/s
-PrEx 20250108-20:42:27   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 9: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250115 -t BIOL
-20250115_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250115_d-OGS--BIOL-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:42:35    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250115_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 60.37 MB 2.77 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 57.00/ 60.37 MB 70.36 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 57.00/ 60.37 MB 60.90 MB/s ...5_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.37 MB 60.90 MB/s ...5_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.37 MB 60.90 MB/s
-PrEx 20250108-20:42:37   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 10: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250116 -t BIOL
-20250116_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250116_d-OGS--BIOL-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:42:45    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250116_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 60.35 MB 2.65 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 49.64/ 60.35 MB 62.73 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 55.05/ 60.35 MB 52.22 MB/s ...6_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.35 MB 52.22 MB/s ...6_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.35 MB 52.22 MB/s
-PrEx 20250108-20:42:48   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 11: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250117 -t BIOL
-20250117_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
-PrEx 20250108-20:42:56    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250117_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 60.36 MB 2.63 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 32.14/ 60.36 MB 66.14 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 59.05/ 60.36 MB 67.39 MB/s ...7_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.36 MB 67.39 MB/s ...7_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc: 60.36 MB 67.39 MB/s
-PrEx 20250108-20:42:58   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-bio_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--BIOL-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-PrEx 20250108-20:42:58    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/DNT /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T194106Z.xml
-.../POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T194106Z.xml:...006_014_20250108T194106Z.xml:   ETA:   0:00    4.06/  4.06 kB   14.70 MB/s  ...006_014_20250108T194106Z.xml:   ETA:   0:00    4.06/  4.06 kB   99.65 kB/s  ...ANALYSISFORECAST_BGC_006_014_20250108T194106Z.xml:    4.06 kB   99.65 kB/s  
-...ANALYSISFORECAST_BGC_006_014_20250108T194106Z.xml:    4.06 kB   99.65 kB/s  
-PrEx 20250108-20:42:59   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/DNT /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T194106Z.xml [ok]
-20250108-20:42:59 00 (004) : pro upload on ftp server completed successfully
-2025/01/08:20:42:59 , event_time_record , 20250108 , bio_transfer-tl-output_delivery_done
-20250108-20:42:59 00 (004) : * EXIT(opa_put_phase_2.ksh) [Ok]
-PrEx 20250108-20:42:59    > . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh
-PrEx 20250108-20:42:59   0< . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh [ok]
-PrEx 20250108-20:42:59    > module load autoload
-PrEx 20250108-20:42:59   0< module load autoload [ok]
-PrEx 20250108-20:42:59    > module load intelmpi/oneapi-2021--binary
-PrEx 20250108-20:42:59   0< module load intelmpi/oneapi-2021--binary [ok]
-PrEx 20250108-20:42:59    > module load mkl/oneapi-2021--binary
-PrEx 20250108-20:42:59   0< module load mkl/oneapi-2021--binary [ok]
-PrEx 20250108-20:42:59    > module load nco
-PrEx 20250108-20:42:59   0< module load nco [ok]
-PrEx 20250108-20:42:59    > module load python/3.11.7--gcc--10.2.0
-PrEx 20250108-20:42:59   0< module load python/3.11.7--gcc--10.2.0 [ok]
-PrEx 20250108-20:42:59    > ulimit -s unlimited
-PrEx 20250108-20:42:59   0< ulimit -s unlimited [ok]
-PrEx 20250108-20:42:59    > source /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/venv/bin/activate
-PrEx 20250108-20:42:59   0< source /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/venv/bin/activate [ok]
-PrEx 20250108-20:42:59    > opa_set_default_run 
-PrEx 20250108-20:42:59   0< opa_set_default_run  [ok]
-PrEx 20250108-20:43:00    > opa_set_run
-### OPA_RUNDATE ...................... '20250108'
-### OPA_WEEKDAY ...................... '3'
-### OPA_TODAY ........................ ''
-### OPA_DEFAULT_RUNDATE .............. '20250108'
-### OPA_PRODDATE ..................... '20250108'
-### OPA_RESTART_RUNDATE .............. '20250107'
-### OPA_RESTART_WEEKDAY .............. '2'
-PrEx 20250108-20:43:00   0< opa_set_run [ok]
-20250108-20:43:00 00 (004) : * START(opa_put_phase_2.ksh)
-_NO_DNT ................ false
-_DRY_RUN ............... false
-_MAX_TRIES ............. 10
-Processing file no. 1: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--CARB-MedBFM4-MED-b20250108_sm-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250107 -t CARB
-20250107_d-OGS--CARB-MedBFM4-MED-b20250108_sm-sv09.00.nc has to be sent
- and 20250107_d-OGS--CARB-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:43:08    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--CARB-MedBFM4-MED-b20250108_sm-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250107_d-OGS--CARB-MedBFM4-MED-b20250108_sm-sv09.00.nc:...-MED-b20250108_sm-sv09.00.nc: ETA: 0:00 0.31/ 62.81 MB 2.65 GB/s ...-MED-b20250108_sm-sv09.00.nc: ETA: 0:00 62.27/ 62.81 MB 76.44 MB/s ...7_d-OGS--CARB-MedBFM4-MED-b20250108_sm-sv09.00.nc: 62.81 MB 76.44 MB/s ...7_d-OGS--CARB-MedBFM4-MED-b20250108_sm-sv09.00.nc: 62.81 MB 76.44 MB/s
-PrEx 20250108-20:43:10   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--CARB-MedBFM4-MED-b20250108_sm-sv09.00.nc 2>&1 [ok]
-Processing file no. 2: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250108 -t CARB
-20250108_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250108_d-OGS--CARB-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:43:18    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250108_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 62.73 MB 2.58 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 60.25/ 62.73 MB 81.49 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 60.25/ 62.73 MB 67.04 MB/s ...8_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.73 MB 67.04 MB/s ...8_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.73 MB 67.04 MB/s
-PrEx 20250108-20:43:20   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 3: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250109 -t CARB
-20250109_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250109_d-OGS--CARB-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:43:28    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250109_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 62.66 MB 2.72 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 36.10/ 62.66 MB 60.96 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 57.35/ 62.66 MB 58.25 MB/s ...9_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.66 MB 58.25 MB/s ...9_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.66 MB 58.25 MB/s
-PrEx 20250108-20:43:30   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 4: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250110 -t CARB
-20250110_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250110_d-OGS--CARB-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:43:39    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250110_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 62.60 MB 2.88 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 26.30/ 62.60 MB 63.63 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 60.17/ 62.60 MB 70.02 MB/s ...0_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.60 MB 70.02 MB/s ...0_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.60 MB 70.02 MB/s
-PrEx 20250108-20:43:40   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 5: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250111 -t CARB
-20250111_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250111_d-OGS--CARB-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:43:49    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250111_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 62.54 MB 2.72 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 22.89/ 62.54 MB 56.44 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 59.62/ 62.54 MB 66.49 MB/s ...1_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.54 MB 66.49 MB/s ...1_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.54 MB 66.49 MB/s
-PrEx 20250108-20:43:50   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 6: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250112 -t CARB
-20250112_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250112_d-OGS--CARB-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:43:59    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250112_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 62.48 MB 2.96 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 14.84/ 62.48 MB 59.44 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 60.15/ 62.48 MB 72.28 MB/s ...2_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.48 MB 72.28 MB/s ...2_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.48 MB 72.28 MB/s
-PrEx 20250108-20:44:00   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 7: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250113 -t CARB
-20250113_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250113_d-OGS--CARB-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:44:09    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250113_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 62.46 MB 2.75 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:02 6.33/ 62.46 MB 24.68 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 61.20/ 62.46 MB 65.34 MB/s ...3_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.46 MB 65.34 MB/s ...3_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.46 MB 65.34 MB/s
-PrEx 20250108-20:44:11   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 8: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250114 -t CARB
-20250114_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250114_d-OGS--CARB-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:44:19    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250114_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 62.45 MB 2.91 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:04 1.85/ 62.45 MB 15.66 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 60.99/ 62.45 MB 63.00 MB/s ...4_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.45 MB 63.00 MB/s ...4_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.45 MB 63.00 MB/s
-PrEx 20250108-20:44:21   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 9: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250115 -t CARB
-20250115_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250115_d-OGS--CARB-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:44:29    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250115_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.29/ 62.42 MB 2.13 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 62.10/ 62.42 MB 64.77 MB/s ...5_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.42 MB 64.77 MB/s ...5_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.42 MB 64.77 MB/s
-PrEx 20250108-20:44:31   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 10: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250116 -t CARB
-20250116_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250116_d-OGS--CARB-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:44:39    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250116_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 62.38 MB 2.29 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 45.40/ 62.38 MB 67.97 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 61.56/ 62.38 MB 57.21 MB/s ...6_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.38 MB 57.21 MB/s ...6_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.38 MB 57.21 MB/s
-PrEx 20250108-20:44:41   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 11: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250117 -t CARB
-20250117_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
-PrEx 20250108-20:44:50    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250117_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/ 62.40 MB 2.14 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 19.17/ 62.40 MB 48.41 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 58.50/ 62.40 MB 61.30 MB/s ...7_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.40 MB 61.30 MB/s ...7_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc: 62.40 MB 61.30 MB/s
-PrEx 20250108-20:44:51   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-car_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--CARB-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-PrEx 20250108-20:44:51    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/DNT /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T194300Z.xml
-.../POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T194300Z.xml:...006_014_20250108T194300Z.xml:   ETA:   0:00    4.06/  4.06 kB   15.21 MB/s  ...006_014_20250108T194300Z.xml:   ETA:   0:00    4.06/  4.06 kB  103.42 kB/s  ...ANALYSISFORECAST_BGC_006_014_20250108T194300Z.xml:    4.06 kB  103.42 kB/s  
-...ANALYSISFORECAST_BGC_006_014_20250108T194300Z.xml:    4.06 kB  103.42 kB/s  
-PrEx 20250108-20:44:52   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/DNT /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T194300Z.xml [ok]
-20250108-20:44:52 00 (004) : pro upload on ftp server completed successfully
-2025/01/08:20:44:52 , event_time_record , 20250108 , bio_transfer-tl-output_delivery_done
-20250108-20:44:52 00 (004) : * EXIT(opa_put_phase_2.ksh) [Ok]
-PrEx 20250108-20:44:52    > . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh
-PrEx 20250108-20:44:52   0< . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh [ok]
-PrEx 20250108-20:44:52    > module load autoload
-PrEx 20250108-20:44:53   0< module load autoload [ok]
-PrEx 20250108-20:44:53    > module load intelmpi/oneapi-2021--binary
-PrEx 20250108-20:44:53   0< module load intelmpi/oneapi-2021--binary [ok]
-PrEx 20250108-20:44:53    > module load mkl/oneapi-2021--binary
-PrEx 20250108-20:44:53   0< module load mkl/oneapi-2021--binary [ok]
-PrEx 20250108-20:44:53    > module load nco
-PrEx 20250108-20:44:53   0< module load nco [ok]
-PrEx 20250108-20:44:53    > module load python/3.11.7--gcc--10.2.0
-PrEx 20250108-20:44:53   0< module load python/3.11.7--gcc--10.2.0 [ok]
-PrEx 20250108-20:44:53    > ulimit -s unlimited
-PrEx 20250108-20:44:53   0< ulimit -s unlimited [ok]
-PrEx 20250108-20:44:53    > source /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/venv/bin/activate
-PrEx 20250108-20:44:53   0< source /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/venv/bin/activate [ok]
-PrEx 20250108-20:44:53    > opa_set_default_run 
-PrEx 20250108-20:44:53   0< opa_set_default_run  [ok]
-PrEx 20250108-20:44:53    > opa_set_run
-### OPA_RUNDATE ...................... '20250108'
-### OPA_WEEKDAY ...................... '3'
-### OPA_TODAY ........................ ''
-### OPA_DEFAULT_RUNDATE .............. '20250108'
-### OPA_PRODDATE ..................... '20250108'
-### OPA_RESTART_RUNDATE .............. '20250107'
-### OPA_RESTART_WEEKDAY .............. '2'
-PrEx 20250108-20:44:53   0< opa_set_run [ok]
-20250108-20:44:53 00 (004) : * START(opa_put_phase_2.ksh)
-_NO_DNT ................ false
-_DRY_RUN ............... false
-_MAX_TRIES ............. 10
-Processing file no. 1: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--PFTC-MedBFM4-MED-b20250108_sm-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250107 -t PFTC
-20250107_d-OGS--PFTC-MedBFM4-MED-b20250108_sm-sv09.00.nc has to be sent
- and 20250107_d-OGS--PFTC-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:45:02    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--PFTC-MedBFM4-MED-b20250108_sm-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250107_d-OGS--PFTC-MedBFM4-MED-b20250108_sm-sv09.00.nc:...-MED-b20250108_sm-sv09.00.nc: ETA: 0:00 0.31/382.86 MB 1.98 GB/s ...-MED-b20250108_sm-sv09.00.nc: ETA: 0:16 5.30/382.86 MB 23.81 MB/s ...-MED-b20250108_sm-sv09.00.nc: ETA: 0:03 122.69/382.86 MB 96.61 MB/s ...-MED-b20250108_sm-sv09.00.nc: ETA: 0:01 235.35/382.86 MB 105.45 MB/s ...-MED-b20250108_sm-sv09.00.nc: ETA: 0:00 352.74/382.86 MB 109.03 MB/s ...-MED-b20250108_sm-sv09.00.nc: ETA: 0:00 379.52/382.86 MB 104.58 MB/s ...7_d-OGS--PFTC-MedBFM4-MED-b20250108_sm-sv09.00.nc: 382.86 MB 104.58 MB/s ...7_d-OGS--PFTC-MedBFM4-MED-b20250108_sm-sv09.00.nc: 382.86 MB 104.58 MB/s
-PrEx 20250108-20:45:07   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--PFTC-MedBFM4-MED-b20250108_sm-sv09.00.nc 2>&1 [ok]
-Processing file no. 2: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250108 -t PFTC
-20250108_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250108_d-OGS--PFTC-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:45:14    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250108_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/382.72 MB 2.09 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:26 1.63/382.72 MB 14.83 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:04 77.93/382.72 MB 68.44 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:03 158.34/382.72 MB 75.33 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:02 249.19/382.72 MB 79.45 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 339.91/382.72 MB 81.84 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 377.57/382.72 MB 78.03 MB/s ...8_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.72 MB 78.03 MB/s ...8_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.72 MB 78.03 MB/s
-PrEx 20250108-20:45:20   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 3: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250109 -t PFTC
-20250109_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250109_d-OGS--PFTC-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:45:27    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250109_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.29/382.55 MB 2.60 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:04 61.26/382.55 MB 76.76 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:02 179.33/382.55 MB 98.98 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 302.62/382.55 MB 108.04 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 377.62/382.55 MB 106.55 MB/s ...9_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.55 MB 106.55 MB/s ...9_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.55 MB 106.55 MB/s
-PrEx 20250108-20:45:32   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 4: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250110 -t PFTC
-20250110_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250110_d-OGS--PFTC-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:45:39    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250110_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/382.43 MB 2.11 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:04 60.33/382.43 MB 87.94 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:02 179.21/382.43 MB 108.38 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 307.84/382.43 MB 114.67 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 377.50/382.43 MB 110.64 MB/s ...0_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.43 MB 110.64 MB/s ...0_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.43 MB 110.64 MB/s
-PrEx 20250108-20:45:44   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 5: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250111 -t PFTC
-20250111_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250111_d-OGS--PFTC-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:45:51    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250111_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/382.37 MB 2.82 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:04 70.30/382.37 MB 86.18 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:02 194.21/382.37 MB 107.21 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 328.37/382.37 MB 116.36 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 381.56/382.37 MB 113.92 MB/s ...1_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.37 MB 113.92 MB/s ...1_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.37 MB 113.92 MB/s
-PrEx 20250108-20:45:56   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 6: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250112 -t PFTC
-20250112_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250112_d-OGS--PFTC-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:46:03    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250112_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.29/382.27 MB 2.07 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:03 89.63/382.27 MB 90.65 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:02 208.26/382.27 MB 105.87 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 336.58/382.27 MB 113.58 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 379.21/382.27 MB 110.86 MB/s ...2_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.27 MB 110.86 MB/s ...2_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.27 MB 110.86 MB/s
-PrEx 20250108-20:46:08   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 7: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250113 -t PFTC
-20250113_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250113_d-OGS--PFTC-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:46:15    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250113_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/382.21 MB 2.70 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:06 21.72/382.21 MB 56.81 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:03 129.41/382.21 MB 97.42 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 253.01/382.21 MB 107.91 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 381.58/382.21 MB 114.66 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 381.58/382.21 MB 110.47 MB/s ...3_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.21 MB 110.47 MB/s ...3_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.21 MB 110.47 MB/s
-PrEx 20250108-20:46:20   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 8: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250114 -t PFTC
-20250114_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250114_d-OGS--PFTC-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:46:26    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250114_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/382.12 MB 2.80 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:03 60.92/382.12 MB 100.22 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 294.78/382.12 MB 182.83 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 378.29/382.12 MB 150.32 MB/s ...4_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.12 MB 150.32 MB/s ...4_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.12 MB 150.32 MB/s
-PrEx 20250108-20:46:31   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 9: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250115 -t PFTC
-20250115_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250115_d-OGS--PFTC-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:46:37    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250115_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/382.02 MB 2.80 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:04 55.26/382.02 MB 78.37 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:02 173.08/382.02 MB 102.46 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 301.15/382.02 MB 112.06 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 381.81/382.02 MB 112.11 MB/s ...5_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.02 MB 112.11 MB/s ...5_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 382.02 MB 112.11 MB/s
-PrEx 20250108-20:46:42   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 10: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250116 -t PFTC
-20250116_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250116_d-OGS--PFTC-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:46:49    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250116_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/381.93 MB 2.72 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:03 81.03/381.93 MB 91.98 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:02 203.88/381.93 MB 108.29 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 331.89/381.93 MB 116.12 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 379.80/381.93 MB 113.39 MB/s ...6_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 381.93 MB 113.39 MB/s ...6_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 381.93 MB 113.39 MB/s
-PrEx 20250108-20:46:54   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 11: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250117 -t PFTC
-20250117_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
-PrEx 20250108-20:47:01    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250117_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 0.31/381.94 MB 2.58 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:04 63.32/381.94 MB 71.25 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:03 143.55/381.94 MB 76.47 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:02 223.84/381.94 MB 78.91 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:01 309.34/381.94 MB 80.00 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 378.69/381.94 MB 77.01 MB/s ...7_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 381.94 MB 77.01 MB/s ...7_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc: 381.94 MB 77.01 MB/s
-PrEx 20250108-20:47:08   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-pft_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--PFTC-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-PrEx 20250108-20:47:08    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/DNT /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T194453Z.xml
-.../POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T194453Z.xml:...006_014_20250108T194453Z.xml:   ETA:   0:00    4.06/  4.06 kB   17.49 MB/s  ...006_014_20250108T194453Z.xml:   ETA:   0:00    4.06/  4.06 kB  101.83 kB/s  ...ANALYSISFORECAST_BGC_006_014_20250108T194453Z.xml:    4.06 kB  101.83 kB/s  
-...ANALYSISFORECAST_BGC_006_014_20250108T194453Z.xml:    4.06 kB  101.83 kB/s  
-PrEx 20250108-20:47:08   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/DNT /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T194453Z.xml [ok]
-20250108-20:47:08 00 (004) : pro upload on ftp server completed successfully
-2025/01/08:20:47:09 , event_time_record , 20250108 , bio_transfer-tl-output_delivery_done
-20250108-20:47:09 00 (004) : * EXIT(opa_put_phase_2.ksh) [Ok]
-PrEx 20250108-20:47:09    > . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh
-PrEx 20250108-20:47:09   0< . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh [ok]
-PrEx 20250108-20:47:09    > module load autoload
-PrEx 20250108-20:47:09   0< module load autoload [ok]
-PrEx 20250108-20:47:09    > module load intelmpi/oneapi-2021--binary
-PrEx 20250108-20:47:09   0< module load intelmpi/oneapi-2021--binary [ok]
-PrEx 20250108-20:47:09    > module load mkl/oneapi-2021--binary
-PrEx 20250108-20:47:09   0< module load mkl/oneapi-2021--binary [ok]
-PrEx 20250108-20:47:09    > module load nco
-PrEx 20250108-20:47:09   0< module load nco [ok]
-PrEx 20250108-20:47:09    > module load python/3.11.7--gcc--10.2.0
-PrEx 20250108-20:47:09   0< module load python/3.11.7--gcc--10.2.0 [ok]
-PrEx 20250108-20:47:09    > ulimit -s unlimited
-PrEx 20250108-20:47:09   0< ulimit -s unlimited [ok]
-PrEx 20250108-20:47:09    > source /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/venv/bin/activate
-PrEx 20250108-20:47:09   0< source /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/venv/bin/activate [ok]
-PrEx 20250108-20:47:09    > opa_set_default_run 
-PrEx 20250108-20:47:09   0< opa_set_default_run  [ok]
-PrEx 20250108-20:47:09    > opa_set_run
-### OPA_RUNDATE ...................... '20250108'
-### OPA_WEEKDAY ...................... '3'
-### OPA_TODAY ........................ ''
-### OPA_DEFAULT_RUNDATE .............. '20250108'
-### OPA_PRODDATE ..................... '20250108'
-### OPA_RESTART_RUNDATE .............. '20250107'
-### OPA_RESTART_WEEKDAY .............. '2'
-PrEx 20250108-20:47:09   0< opa_set_run [ok]
-20250108-20:47:09 00 (004) : * START(opa_put_phase_2.ksh)
-_NO_DNT ................ false
-_DRY_RUN ............... false
-_MAX_TRIES ............. 10
-Processing file no. 1: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--CO2F-MedBFM4-MED-b20250108_sm-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250107 -t CO2F
-20250107_d-OGS--CO2F-MedBFM4-MED-b20250108_sm-sv09.00.nc has to be sent
- and 20250107_d-OGS--CO2F-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:47:15    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--CO2F-MedBFM4-MED-b20250108_sm-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250107_d-OGS--CO2F-MedBFM4-MED-b20250108_sm-sv09.00.nc:...-MED-b20250108_sm-sv09.00.nc: ETA: 0:00 313.92/851.69 kB 2.99 GB/s ...-MED-b20250108_sm-sv09.00.nc: ETA: 0:00 500.58/851.69 kB 1.54 MB/s ...7_d-OGS--CO2F-MedBFM4-MED-b20250108_sm-sv09.00.nc: 851.69 kB 1.54 MB/s ...7_d-OGS--CO2F-MedBFM4-MED-b20250108_sm-sv09.00.nc: 851.69 kB 1.54 MB/s
-PrEx 20250108-20:47:16   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--CO2F-MedBFM4-MED-b20250108_sm-sv09.00.nc 2>&1 [ok]
-Processing file no. 2: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250108 -t CO2F
-20250108_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250108_d-OGS--CO2F-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:47:22    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250108_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/848.05 kB 2.91 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 619.36/848.05 kB 2.01 MB/s ...8_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 848.05 kB 2.01 MB/s ...8_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 848.05 kB 2.01 MB/s
-PrEx 20250108-20:47:23   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 3: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250109 -t CO2F
-20250109_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250109_d-OGS--CO2F-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:47:29    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250109_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/846.16 kB 3.02 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 619.36/846.16 kB 2.08 MB/s ...9_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 846.16 kB 2.08 MB/s ...9_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 846.16 kB 2.08 MB/s
-PrEx 20250108-20:47:30   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 4: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250110 -t CO2F
-20250110_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250110_d-OGS--CO2F-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:47:36    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250110_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/846.36 kB 3.12 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 619.36/846.36 kB 1.93 MB/s ...0_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 846.36 kB 1.93 MB/s ...0_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 846.36 kB 1.93 MB/s
-PrEx 20250108-20:47:37   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 5: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250111 -t CO2F
-20250111_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250111_d-OGS--CO2F-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:47:43    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250111_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/845.26 kB 2.58 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 500.58/845.26 kB 1.86 MB/s ...1_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 845.26 kB 1.86 MB/s ...1_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 845.26 kB 1.86 MB/s
-PrEx 20250108-20:47:44   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 6: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250112 -t CO2F
-20250112_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250112_d-OGS--CO2F-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:47:50    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250112_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/844.75 kB 3.12 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 551.48/844.75 kB 1.86 MB/s ...2_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 844.75 kB 1.86 MB/s ...2_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 844.75 kB 1.86 MB/s
-PrEx 20250108-20:47:51   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 7: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250113 -t CO2F
-20250113_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250113_d-OGS--CO2F-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:47:57    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250113_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 299.78/844.63 kB 2.89 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 622.19/844.63 kB 2.03 MB/s ...3_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 844.63 kB 2.03 MB/s ...3_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 844.63 kB 2.03 MB/s
-PrEx 20250108-20:47:58   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 8: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250114 -t CO2F
-20250114_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250114_d-OGS--CO2F-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:48:04    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250114_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/845.10 kB 2.91 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 619.36/845.10 kB 1.78 MB/s ...4_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 845.10 kB 1.78 MB/s ...4_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 845.10 kB 1.78 MB/s
-PrEx 20250108-20:48:05   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 9: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250115 -t CO2F
-20250115_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250115_d-OGS--CO2F-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:48:11    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250115_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/842.95 kB 2.96 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 619.36/842.95 kB 1.91 MB/s ...5_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 842.95 kB 1.91 MB/s ...5_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 842.95 kB 1.91 MB/s
-PrEx 20250108-20:48:12   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 10: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250116 -t CO2F
-20250116_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250116_d-OGS--CO2F-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:48:18    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250116_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/843.36 kB 3.15 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 619.36/843.36 kB 1.98 MB/s ...6_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 843.36 kB 1.98 MB/s ...6_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 843.36 kB 1.98 MB/s
-PrEx 20250108-20:48:19   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 11: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250117 -t CO2F
-20250117_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
-PrEx 20250108-20:48:25    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250117_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/844.59 kB 3.09 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 619.36/844.59 kB 2.00 MB/s ...7_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 844.59 kB 2.00 MB/s ...7_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc: 844.59 kB 2.00 MB/s
-PrEx 20250108-20:48:26   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-co2_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--CO2F-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-PrEx 20250108-20:48:27    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/DNT /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T194709Z.xml
-.../POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T194709Z.xml:...006_014_20250108T194709Z.xml:   ETA:   0:00    4.06/  4.06 kB   17.88 MB/s  ...006_014_20250108T194709Z.xml:   ETA:   0:00    4.06/  4.06 kB   93.25 kB/s  ...ANALYSISFORECAST_BGC_006_014_20250108T194709Z.xml:    4.06 kB   93.25 kB/s  
-...ANALYSISFORECAST_BGC_006_014_20250108T194709Z.xml:    4.06 kB   93.25 kB/s  
-PrEx 20250108-20:48:27   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/DNT /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T194709Z.xml [ok]
-20250108-20:48:27 00 (004) : pro upload on ftp server completed successfully
-2025/01/08:20:48:27 , event_time_record , 20250108 , bio_transfer-tl-output_delivery_done
-20250108-20:48:27 00 (004) : * EXIT(opa_put_phase_2.ksh) [Ok]
-PrEx 20250108-20:48:27    > . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh
-PrEx 20250108-20:48:27   0< . /cineca/prod/opt/environment/module/4.7.0/none/init/ksh [ok]
-PrEx 20250108-20:48:27    > module load autoload
-PrEx 20250108-20:48:28   0< module load autoload [ok]
-PrEx 20250108-20:48:28    > module load intelmpi/oneapi-2021--binary
-PrEx 20250108-20:48:28   0< module load intelmpi/oneapi-2021--binary [ok]
-PrEx 20250108-20:48:28    > module load mkl/oneapi-2021--binary
-PrEx 20250108-20:48:28   0< module load mkl/oneapi-2021--binary [ok]
-PrEx 20250108-20:48:28    > module load nco
-PrEx 20250108-20:48:28   0< module load nco [ok]
-PrEx 20250108-20:48:28    > module load python/3.11.7--gcc--10.2.0
-PrEx 20250108-20:48:28   0< module load python/3.11.7--gcc--10.2.0 [ok]
-PrEx 20250108-20:48:28    > ulimit -s unlimited
-PrEx 20250108-20:48:28   0< ulimit -s unlimited [ok]
-PrEx 20250108-20:48:28    > source /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/venv/bin/activate
-PrEx 20250108-20:48:28   0< source /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/venv/bin/activate [ok]
-PrEx 20250108-20:48:28    > opa_set_default_run 
-PrEx 20250108-20:48:28   0< opa_set_default_run  [ok]
-PrEx 20250108-20:48:28    > opa_set_run
-### OPA_RUNDATE ...................... '20250108'
-### OPA_WEEKDAY ...................... '3'
-### OPA_TODAY ........................ ''
-### OPA_DEFAULT_RUNDATE .............. '20250108'
-### OPA_PRODDATE ..................... '20250108'
-### OPA_RESTART_RUNDATE .............. '20250107'
-### OPA_RESTART_WEEKDAY .............. '2'
-PrEx 20250108-20:48:28   0< opa_set_run [ok]
-20250108-20:48:28 00 (004) : * START(opa_put_phase_2.ksh)
-_NO_DNT ................ false
-_DRY_RUN ............... false
-_MAX_TRIES ............. 10
-Processing file no. 1: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--EXCO-MedBFM4-MED-b20250108_sm-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250107 -t EXCO
-20250107_d-OGS--EXCO-MedBFM4-MED-b20250108_sm-sv09.00.nc has to be sent
- and 20250107_d-OGS--EXCO-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:48:34    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--EXCO-MedBFM4-MED-b20250108_sm-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250107_d-OGS--EXCO-MedBFM4-MED-b20250108_sm-sv09.00.nc:...-MED-b20250108_sm-sv09.00.nc: ETA: 0:00 313.92/420.51 kB 2.70 GB/s ...-MED-b20250108_sm-sv09.00.nc: ETA: 0:00 313.92/420.51 kB 8.38 MB/s ...-MED-b20250108_sm-sv09.00.nc: ETA: 0:00 313.92/420.51 kB 1.19 MB/s ...7_d-OGS--EXCO-MedBFM4-MED-b20250108_sm-sv09.00.nc: 420.51 kB 1.19 MB/s ...7_d-OGS--EXCO-MedBFM4-MED-b20250108_sm-sv09.00.nc: 420.51 kB 1.19 MB/s
-PrEx 20250108-20:48:35   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250107_d-OGS--EXCO-MedBFM4-MED-b20250108_sm-sv09.00.nc 2>&1 [ok]
-Processing file no. 2: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250108 -t EXCO
-20250108_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250108_d-OGS--EXCO-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:48:41    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250108_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/418.73 kB 3.12 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/418.73 kB 1.20 MB/s ...8_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 418.73 kB 1.20 MB/s ...8_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 418.73 kB 1.20 MB/s
-PrEx 20250108-20:48:42   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250108_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 3: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250109 -t EXCO
-20250109_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250109_d-OGS--EXCO-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:48:48    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250109_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 299.78/418.52 kB 2.98 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 299.78/418.52 kB 7.84 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 299.78/418.52 kB 1.09 MB/s ...9_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 418.52 kB 1.09 MB/s ...9_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 418.52 kB 1.09 MB/s
-PrEx 20250108-20:48:49   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250109_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 4: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250110 -t EXCO
-20250110_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250110_d-OGS--EXCO-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:48:55    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250110_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 299.78/417.36 kB 2.92 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 299.78/417.36 kB 7.55 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 299.78/417.36 kB 1.04 MB/s ...0_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 417.36 kB 1.04 MB/s ...0_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 417.36 kB 1.04 MB/s
-PrEx 20250108-20:48:56   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250110_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 5: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250111 -t EXCO
-20250111_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250111_d-OGS--EXCO-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:49:02    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250111_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/419.17 kB 1.86 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/419.17 kB 7.84 MB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/419.17 kB 1.10 MB/s ...1_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 419.17 kB 1.10 MB/s ...1_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 419.17 kB 1.10 MB/s
-PrEx 20250108-20:49:03   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250111_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 6: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250112 -t EXCO
-20250112_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250112_d-OGS--EXCO-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:49:09    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250112_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/418.56 kB 3.18 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/418.56 kB 1.18 MB/s ...2_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 418.56 kB 1.18 MB/s ...2_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 418.56 kB 1.18 MB/s
-PrEx 20250108-20:49:10   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250112_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 7: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250113 -t EXCO
-20250113_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250113_d-OGS--EXCO-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:49:16    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250113_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 299.78/417.19 kB 3.01 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 299.78/417.19 kB 936.15 kB/s ...3_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 417.19 kB 936.15 kB/s ...3_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 417.19 kB 936.15 kB/s
-PrEx 20250108-20:49:17   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250113_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 8: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250114 -t EXCO
-20250114_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250114_d-OGS--EXCO-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:49:23    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250114_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/416.17 kB 2.85 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/416.17 kB 1.18 MB/s ...4_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 416.17 kB 1.18 MB/s ...4_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 416.17 kB 1.18 MB/s
-PrEx 20250108-20:49:24   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250114_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 9: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250115 -t EXCO
-20250115_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250115_d-OGS--EXCO-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:49:30    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250115_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/417.71 kB 3.12 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/417.71 kB 888.99 kB/s ...5_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 417.71 kB 888.99 kB/s ...5_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 417.71 kB 888.99 kB/s
-PrEx 20250108-20:49:31   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250115_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 10: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250116 -t EXCO
-20250116_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
- and 20250116_d-OGS--EXCO-MedBFM4-MED-b20250107_fc-sv09.00.nc will be removed 
-PrEx 20250108-20:49:37    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250116_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/418.76 kB 3.12 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/418.76 kB 1.28 MB/s ...6_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 418.76 kB 1.28 MB/s ...6_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 418.76 kB 1.28 MB/s
-PrEx 20250108-20:49:38   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250116_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-Processing file no. 11: /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc
-DEBUG  /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/get_daily_product_in_DU.sh -d 20250117 -t EXCO
-20250117_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc has to be sent
-PrEx 20250108-20:49:44    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1
-.../POSTPROC/PRODUCTS/20250117_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc:...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/420.10 kB 3.05 GB/s ...-MED-b20250108_fc-sv09.00.nc: ETA: 0:00 313.92/420.10 kB 1.35 MB/s ...7_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 420.10 kB 1.35 MB/s ...7_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc: 420.10 kB 1.35 MB/s
-PrEx 20250108-20:49:45   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/cmems_mod_med_bgc-optics_anfc_4.2km_P1D-m_202411/2025/01 /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/20250117_d-OGS--EXCO-MedBFM4-MED-b20250108_fc-sv09.00.nc 2>&1 [ok]
-PrEx 20250108-20:49:45    > /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/DNT /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T194828Z.xml
-.../POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T194828Z.xml:...006_014_20250108T194828Z.xml:   ETA:   0:00    4.07/  4.07 kB   17.42 MB/s  ...006_014_20250108T194828Z.xml:   ETA:   0:00    4.07/  4.07 kB   92.36 kB/s  ...ANALYSISFORECAST_BGC_006_014_20250108T194828Z.xml:    4.07 kB   92.36 kB/s  
-...ANALYSISFORECAST_BGC_006_014_20250108T194828Z.xml:    4.07 kB   92.36 kB/s  
-PrEx 20250108-20:49:46   0< /g100/home/usera07ogs/a07ogs00/OPA/V11C/HOST/g100/bin/ncftpput -u cmems_med_ogs -p 9J2e+uLU -T .tmp. ftp-nrt.marine.copernicus.eu /MEDSEA_ANALYSISFORECAST_BGC_006_014/DNT /g100_work/OGS_prodC/OPA/V11C/prod/wrkdir/forecast/3/POSTPROC/PRODUCTS/MEDSEA_ANALYSISFORECAST_BGC_006_014_20250108T194828Z.xml [ok]
-20250108-20:49:46 00 (004) : pro upload on ftp server completed successfully
-2025/01/08:20:49:46 , event_time_record , 20250108 , bio_transfer-tl-output_delivery_done
-20250108-20:49:46 00 (004) : * EXIT(opa_put_phase_2.ksh) [Ok]
